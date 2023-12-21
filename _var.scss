@@ -1,0 +1,34 @@
+$main-font-family : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+// body
+$primary-text-color: #eee;
+$secondary-text-color: #aaa;
+$primary-background-color: #181818;
+$primary-yellow-color: #FFE74C;
+
+// header 
+$header-background: #181818;
+
+// nav logo
+$logo-font: cursive;
+$logo-background-color: yellow;
+$logo-size: 3.5rem;
+$logo-font-color: black;
+
+
+// intro
+$outer-box-height: calc(100vh - #{$logo-size} - 1rem);
+// text
+// h1
+$h1-font-color: #eee;
+
+@mixin centerGrid {
+    display: grid;
+    place-items: center;
+}
+
+@mixin centerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
