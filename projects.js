@@ -13,8 +13,8 @@ projects.forEach(project => {
 window.addEventListener("mousemove", (e) => {
     const projectImageBoxs = document.querySelectorAll(".project-box");
 
-    const xoffset = 200;
-    const yoffset = 200;
+    const xoffset = window.innerWidth > 800 ? 200 : 60;
+    const yoffset = xoffset;
     projectImageBoxs.forEach(projectImageBox => {
         const projectImageBoxWidth = projectImageBox.clientWidth;
         const projectImageBoxHeight = projectImageBox.clientHeight;
