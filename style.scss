@@ -1,6 +1,10 @@
 @use "var";
 @use 'media';
 
+:root{
+  --special-color : #{var.$special-color};
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +36,7 @@ main {
     width: var.$logo-size;
     height: var.$logo-size;
     border-radius: 50%;
-    background-color: var.$special-color;
+    background-color: var(--special-color);
     @include var.centerGrid;
 
     p {
@@ -57,7 +61,7 @@ main {
     border-radius: 100%;
     pointer-events: none;
     z-index: 9999;
-    border: 2px solid var.$special-color;
+    border: 2px solid var(--special-color);
     transform: translate(-50%, -50%);
     transition: width 0.3s ease-in-out;
 }
@@ -132,7 +136,7 @@ header {
         display: block;
         position: relative;
         font-size: 4.5rem;
-        color: var.$special-color;
+        color: var(--special-color);
         overflow: hidden;
         white-space: nowrap;
         animation: typing 3s alternate steps(15, end) infinite;
@@ -149,7 +153,7 @@ header {
         }
 
         &::selection{
-            background-color: var.$special-color;
+            background-color: var(--special-color);
             color: var.$primary-background-color;
         }
       }
@@ -173,7 +177,7 @@ header {
       }
 
       &::selection {
-        background-color: var.$special-color;
+        background-color: var(--special-color);
         color: var.$secondary-background-color;
       }
     }
@@ -183,7 +187,7 @@ header {
         font-size: x-large;
 
         &::selection {
-          background-color: var.$special-color;
+          background-color: var(--special-color);
           color: var.$secondary-background-color;
         }
     }
@@ -198,7 +202,7 @@ header {
       width: 90%;
       aspect-ratio: 1/1;
       border-radius: 50% 30% 50% 24%;
-      background-color: var.$special-color;
+      background-color: var(--special-color);
       box-shadow: 0 0 8rem 0 var.$sideBoxShadow;
       animation: glowup alternate 3s infinite;
     }
@@ -285,7 +289,7 @@ header {
         }
 
         &:hover {
-          background-color: var.$special-color;
+          background-color: var(--special-color);
 
           span,
           p {
@@ -307,7 +311,7 @@ header {
     a{
         text-decoration: none;
         padding: 1rem 2rem;
-        background-color: var.$special-color;
+        background-color: var(--special-color);
         border-radius: 5rem;
         color: var.$primary-background-color;
         transition: box-shadow 0.3s ease-in-out;
@@ -371,7 +375,7 @@ header {
           left: 0;
           width: 100%;
           height: 70%;
-          background-color: var.$special-color;
+          background-color: var(--special-color);
           z-index: 1;
           border-radius: 15rem 8rem 18rem 12rem;
         }
@@ -408,7 +412,7 @@ header {
 
           name {
             font-size: larger;
-            color: var.$special-color;
+            color: var(--special-color);
           }
         }
       }
@@ -423,7 +427,7 @@ footer {
     width: 100%;
     // padding: 1rem 12.5%;
     background-color: var.$primary-background-color;
-    border-top: 1px solid var.$special-color;
+    border-top: 1px solid var(--special-color);
     padding: $padding 12.5%;
     height: $height;
     display: flex;
@@ -441,7 +445,7 @@ footer {
         // top: -5px;
         left: calc(50% - (85%/2));
         border-radius: 1rem;
-        background-color: var.$special-color;
+        background-color: var(--special-color);
     }
 
     .left-section {
@@ -519,7 +523,7 @@ footer {
         margin: auto 3rem;
         height: 80%;
         width: 2px;
-        background-color: var.$special-color;
+        background-color: var(--special-color);
         border-radius: 1rem;
     }
 
@@ -557,7 +561,7 @@ footer {
                     padding: 10px;
                     border: none;
                     border-radius: 1rem;
-                    background-color: var.$special-color;
+                    background-color: var(--special-color);
                     color: var.$primary-background-color;
                     cursor: pointer;
                 }

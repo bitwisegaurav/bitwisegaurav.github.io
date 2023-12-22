@@ -134,6 +134,10 @@
     height: unset;
   }
 }
+:root {
+  --special-color: #FFE74C;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -172,7 +176,7 @@ main {
   border-radius: 100%;
   pointer-events: none;
   z-index: 9999;
-  border: 2px solid #FFE74C;
+  border: 2px solid var(--special-color);
   transform: translate(-50%, -50%);
   transition: width 0.3s ease-in-out;
 }
@@ -197,7 +201,7 @@ header nav .logo {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   display: grid;
   place-items: center;
 }
@@ -254,7 +258,7 @@ header nav .last .active {
   display: block;
   position: relative;
   font-size: 4.5rem;
-  color: #FFE74C;
+  color: var(--special-color);
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s alternate steps(15, end) infinite;
@@ -270,11 +274,11 @@ header nav .last .active {
   animation: blink 1s steps(1, end) infinite;
 }
 #intro .text h1 name::-moz-selection {
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   color: #181818;
 }
 #intro .text h1 name::selection {
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   color: #181818;
 }
 @keyframes typing {
@@ -294,11 +298,11 @@ header nav .last .active {
   }
 }
 #intro .text h1::-moz-selection {
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   color: #555;
 }
 #intro .text h1::selection {
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   color: #555;
 }
 #intro .text p {
@@ -306,11 +310,11 @@ header nav .last .active {
   font-size: x-large;
 }
 #intro .text p::-moz-selection {
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   color: #555;
 }
 #intro .text p::selection {
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   color: #555;
 }
 #intro .sidepart {
@@ -322,7 +326,7 @@ header nav .last .active {
   width: 90%;
   aspect-ratio: 1/1;
   border-radius: 50% 30% 50% 24%;
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   box-shadow: 0 0 8rem 0 rgba(255, 231, 76, 0.3);
   animation: glowup alternate 3s infinite;
 }
@@ -402,7 +406,7 @@ header nav .last .active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.358);
 }
 #projects .projects-outerBox a:hover {
-  background-color: #FFE74C;
+  background-color: var(--special-color);
 }
 #projects .projects-outerBox a:hover span,
 #projects .projects-outerBox a:hover p {
@@ -419,7 +423,7 @@ header nav .last .active {
 #projects .projects-lower a {
   text-decoration: none;
   padding: 1rem 2rem;
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   border-radius: 5rem;
   color: #181818;
   transition: box-shadow 0.3s ease-in-out;
@@ -477,7 +481,7 @@ header nav .last .active {
   left: 0;
   width: 100%;
   height: 70%;
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   z-index: 1;
   border-radius: 15rem 8rem 18rem 12rem;
 }
@@ -515,14 +519,14 @@ header nav .last .active {
 }
 .about-outerBox #about .about-me .about-desc p name {
   font-size: larger;
-  color: #FFE74C;
+  color: var(--special-color);
 }
 
 footer {
   position: relative;
   width: 100%;
   background-color: #181818;
-  border-top: 1px solid #FFE74C;
+  border-top: 1px solid var(--special-color);
   padding: 3rem 12.5%;
   height: 27rem;
   display: flex;
@@ -538,7 +542,7 @@ footer::before {
   top: calc(-8px / 2);
   left: 7.5%;
   border-radius: 1rem;
-  background-color: #FFE74C;
+  background-color: var(--special-color);
 }
 footer .left-section {
   width: 65%;
@@ -560,7 +564,7 @@ footer .left-section .upper .logo {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   display: grid;
   place-items: center;
 }
@@ -613,7 +617,7 @@ footer .line {
   margin: auto 3rem;
   height: 80%;
   width: 2px;
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   border-radius: 1rem;
 }
 footer .right-section .contact-form {
@@ -644,7 +648,7 @@ footer .right-section .contact-form form button {
   padding: 10px;
   border: none;
   border-radius: 1rem;
-  background-color: #FFE74C;
+  background-color: var(--special-color);
   color: #181818;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
