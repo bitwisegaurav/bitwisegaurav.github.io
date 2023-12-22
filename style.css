@@ -6,6 +6,14 @@
   color: #eee;
   scroll-behavior: smooth;
 }
+*::-moz-selection {
+  background-color: #fff196;
+  color: #555;
+}
+*::selection {
+  background-color: #fff196;
+  color: #555;
+}
 
 html {
   scroll-padding-top: 6rem;
@@ -30,6 +38,7 @@ main {
   z-index: 9999;
   border: 2px solid #FFE74C;
   transform: translate(-50%, -50%);
+  transition: width 0.3s ease-in-out;
 }
 
 header {
@@ -52,12 +61,12 @@ header nav .logo {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: #FFE74C;
   display: grid;
   place-items: center;
 }
 header nav .logo p {
-  color: black;
+  color: #181818;
   font-family: cursive;
   font-size: large;
 }
@@ -97,20 +106,21 @@ header nav .last .active {
   height: -moz-max-content;
   height: max-content;
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
 #intro .text h1 {
   font-size: 3rem;
+  width: -moz-max-content;
+  width: max-content;
 }
 #intro .text h1 name {
   display: block;
   position: relative;
   font-size: 4.5rem;
-  color: rgb(255, 255, 99);
+  color: #FFE74C;
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s alternate steps(15, end) infinite;
-  pointer-events: none;
 }
 #intro .text h1 name::after {
   content: "";
@@ -122,9 +132,17 @@ header nav .last .active {
   background-color: currentColor;
   animation: blink 1s steps(1, end) infinite;
 }
+#intro .text h1 name::-moz-selection {
+  background-color: #FFE74C;
+  color: #181818;
+}
+#intro .text h1 name::selection {
+  background-color: #FFE74C;
+  color: #181818;
+}
 @keyframes typing {
   0% {
-    width: 0;
+    width: 0%;
   }
   30%, 100% {
     width: 100%;
@@ -138,9 +156,25 @@ header nav .last .active {
     opacity: 0;
   }
 }
+#intro .text h1::-moz-selection {
+  background-color: #FFE74C;
+  color: #555;
+}
+#intro .text h1::selection {
+  background-color: #FFE74C;
+  color: #555;
+}
 #intro .text p {
   color: #aaa;
   font-size: x-large;
+}
+#intro .text p::-moz-selection {
+  background-color: #FFE74C;
+  color: #555;
+}
+#intro .text p::selection {
+  background-color: #FFE74C;
+  color: #555;
 }
 #intro .sidepart {
   width: 45%;
@@ -152,15 +186,15 @@ header nav .last .active {
   aspect-ratio: 1/1;
   border-radius: 50% 30% 50% 24%;
   background-color: #FFE74C;
-  box-shadow: 0 0 8rem 0 rgba(255, 255, 0, 0.358);
+  box-shadow: 0 0 8rem 0 rgba(255, 231, 76, 0.3);
   animation: glowup alternate 3s infinite;
 }
 @keyframes glowup {
   from {
-    box-shadow: 0 0 1rem 0 rgba(255, 255, 0, 0.358);
+    box-shadow: 0 0 1rem 0 rgba(255, 231, 76, 0.3);
   }
   to {
-    box-shadow: 0 0 8rem 0 rgba(255, 255, 0, 0.358);
+    box-shadow: 0 0 8rem 0 rgba(255, 231, 76, 0.3);
   }
 }
 #intro::after {
@@ -185,6 +219,12 @@ header nav .last .active {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 2rem;
+}
+#projects #projects-title::-moz-selection {
+  color: #181818;
+}
+#projects #projects-title::selection {
+  color: #181818;
 }
 #projects .projects-outerBox {
   width: 100%;
@@ -216,6 +256,39 @@ header nav .last .active {
 #projects .projects-outerBox a:hover span,
 #projects .projects-outerBox a:hover p {
   color: #181818;
+}
+#projects .projects-lower {
+  width: 100%;
+  margin-top: 7rem;
+  text-align: center;
+}
+#projects .projects-lower a {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: #FFE74C;
+  border-radius: 5rem;
+  color: #181818;
+  transition: box-shadow 0.3s ease-in-out;
+}
+#projects .projects-lower a arrow {
+  display: inline-block;
+  color: #181818;
+  margin-left: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+#projects .projects-lower a:hover {
+  box-shadow: 0 0 2rem 0 rgba(255, 231, 76, 0.1);
+}
+#projects .projects-lower a:hover arrow {
+  animation: forward 0.5s alternate infinite ease-out;
+}
+@keyframes forward {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(1rem);
+  }
 }
 
 .about-outerBox {
@@ -268,6 +341,12 @@ header nav .last .active {
   font-size: 4rem;
   margin-top: 4rem;
   margin-bottom: 6rem;
+}
+.about-outerBox #about .about-me .about-title::-moz-selection {
+  color: #181818;
+}
+.about-outerBox #about .about-me .about-title::selection {
+  color: #181818;
 }
 .about-outerBox #about .about-me .about-desc {
   word-spacing: 4px;
@@ -325,12 +404,12 @@ footer .left-section .upper .logo {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: #FFE74C;
   display: grid;
   place-items: center;
 }
 footer .left-section .upper .logo p {
-  color: black;
+  color: #181818;
   font-family: cursive;
   font-size: large;
 }

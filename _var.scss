@@ -4,23 +4,27 @@ $main-font-family : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
 $primary-text-color: #eee;
 $secondary-text-color: #aaa;
 $primary-background-color: #181818;
-$primary-yellow-color: #FFE74C;
+$secondary-background-color: #555;
+$selection-background-color: #fff196;
+$special-color: #FFE74C;
+// $special-color: #af9dff;
 
 // header 
 $header-background: #181818;
 
 // nav logo
 $logo-font: cursive;
-$logo-background-color: yellow;
 $logo-size: 3.5rem;
-$logo-font-color: black;
-
 
 // intro
+$sideBoxShadow: rgba($special-color, 0.3);
 $outer-box-height: calc(100vh - #{$logo-size} - 1rem);
 // text
 // h1
 $h1-font-color: #eee;
+
+// projects
+$moreBoxShadow: rgba($special-color, 0.1);
 
 @mixin centerGrid {
     display: grid;
