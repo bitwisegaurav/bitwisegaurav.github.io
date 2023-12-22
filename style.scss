@@ -245,6 +245,7 @@ header {
     // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     // border: 2px solid red;
       a {
+        position: relative;
         width: 100%;
         text-decoration: none;
         padding: 1rem 2rem;
@@ -252,6 +253,20 @@ header {
         font-size: 2rem;
         border-top: 1px solid rgba(255, 255, 255, 0.358);
         transition: background-color 0.3s ease-in-out;
+
+        .project-box {
+            display: none;
+            position: fixed;
+            bottom: 5rem;
+            left: 5rem;
+            width: 30rem;
+            max-height: 20rem;
+            z-index: 99;
+            img {
+                width: 100%;
+                border-radius: 1rem;
+            }
+        }
         
         p {
             width: 100%;
@@ -274,6 +289,10 @@ header {
           p {
             color: var.$primary-background-color;
           }
+        }
+
+        &:hover .project-box {
+            display: block;
         }
       }
   }

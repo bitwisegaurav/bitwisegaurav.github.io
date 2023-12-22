@@ -232,6 +232,7 @@ header nav .last .active {
   margin-top: 7rem;
 }
 #projects .projects-outerBox a {
+  position: relative;
   width: 100%;
   text-decoration: none;
   padding: 1rem 2rem;
@@ -239,6 +240,19 @@ header nav .last .active {
   font-size: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.358);
   transition: background-color 0.3s ease-in-out;
+}
+#projects .projects-outerBox a .project-box {
+  display: none;
+  position: fixed;
+  bottom: 5rem;
+  left: 5rem;
+  width: 30rem;
+  max-height: 20rem;
+  z-index: 99;
+}
+#projects .projects-outerBox a .project-box img {
+  width: 100%;
+  border-radius: 1rem;
 }
 #projects .projects-outerBox a p {
   width: 100%;
@@ -256,6 +270,9 @@ header nav .last .active {
 #projects .projects-outerBox a:hover span,
 #projects .projects-outerBox a:hover p {
   color: #181818;
+}
+#projects .projects-outerBox a:hover .project-box {
+  display: block;
 }
 #projects .projects-lower {
   width: 100%;
