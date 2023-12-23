@@ -250,15 +250,21 @@ header {
     margin-top: 7rem;
     // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     // border: 2px solid red;
+
+    ul  li {
+      list-style: none;
       a {
         position: relative;
         width: 100%;
         text-decoration: none;
         padding: 1rem 2rem;
         display: flex;
+        justify-content: space-between;
+        gap: 2rem;
         font-size: 2rem;
         border-top: 1px solid rgba(255, 255, 255, 0.358);
         transition: background-color 0.3s ease-in-out;
+        overflow: hidden;
 
         .project-box {
             display: none;
@@ -273,16 +279,28 @@ header {
                 border-radius: 1rem;
             }
         }
-        
-        p {
-            width: 100%;
+
+        .project-technologies {
+            span {
+              font-family: unset;
+              text-transform: capitalize;
+              font-size: x-small;
+              padding: 5px 10px;
+              border-radius: 1rem;
+              color: var.$secondary-text-color;
+              border: 1px solid var.$secondary-text-color;
+            }
+          }
+          
+          p {
+            // width: 100%;
             // border: 2px solid blue;
             text-align: center;
-        }
-        
-        span, p{
+          }
+          
+          span, p{
             font-family: cursive;
-        }
+          }
 
         &:last-child {
           border-bottom: 1px solid rgba(255, 255, 255, 0.358);
@@ -296,17 +314,21 @@ header {
             color: var.$primary-background-color;
           }
         }
-
+        
         &:hover .project-box {
-            display: block;
+          display: block;
         }
       }
+    }
   }
 
   .projects-lower {
     width: 100%;
+    display: flex;
+    justify-content: center;
     margin-top: 7rem;
-    text-align: center;
+    height: max-content;
+    // overflow: hidden;
 
     a{
         text-decoration: none;
@@ -416,6 +438,33 @@ header {
           }
         }
       }
+
+      .technology-title {
+        width: 100%;
+        font-size: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        @include titleSelection;
+
+      }
+      .technologies {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1rem;
+        row-gap: 10px;
+
+        div {
+          padding: 5px 15px;
+          text-transform: capitalize;
+          border-radius: 5rem;
+          border: 1px solid var.$secondary-text-color;
+          color: var.$secondary-text-color;
+          transition: box-shadow 0.3s ease-in-out;
+          font-size: small;
+        }
+      }
+
     }
   }
 }
@@ -433,6 +482,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 
     &::before{
         $height : 8px;
