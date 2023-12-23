@@ -212,23 +212,41 @@ header nav .logo p {
 }
 header nav .last {
   display: flex;
+  align-items: center;
   gap: 3rem;
 }
-header nav .last a {
+header nav .last .nav-links {
+  display: flex;
+  gap: 3rem;
+}
+header nav .last .nav-links a {
   text-decoration: none;
   transition: -webkit-text-decoration 0.3s ease-in-out;
   transition: text-decoration 0.3s ease-in-out;
   transition: text-decoration 0.3s ease-in-out, -webkit-text-decoration 0.3s ease-in-out;
   color: #aaa;
 }
-header nav .last a:hover {
+header nav .last .nav-links a:hover {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
-header nav .last .active {
+header nav .last .nav-links .active {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   color: #eee;
+}
+header nav .last button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  background-color: var(--special-color);
+  color: #181818;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+header nav .last button:hover {
+  box-shadow: 0 0 1rem 0 rgba(255, 231, 76, 0.1);
 }
 
 #intro {

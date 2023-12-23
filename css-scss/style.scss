@@ -87,23 +87,45 @@ header {
 
     .last {
       display: flex;
+      align-items: center;
       gap: 3rem;
+      
+      .nav-links {
+        display: flex;
+        gap: 3rem;
 
-      a {
-        text-decoration: none;
-        transition: text-decoration 0.3s ease-in-out;
-        color: var.$secondary-text-color;
+        a {
+          text-decoration: none;
+          transition: text-decoration 0.3s ease-in-out;
+          color: var.$secondary-text-color;
 
-        &:hover {
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+          }
+        }
+
+        .active {
           text-decoration: underline;
           text-underline-offset: 0.5rem;
+          color: var.$primary-text-color;
         }
       }
 
-      .active {
-        text-decoration: underline;
-        text-underline-offset: 0.5rem;
-        color: var.$primary-text-color;
+      button {
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        border-radius: 2rem;
+        background-color: var(--special-color);
+        color: var.$primary-background-color;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease-in-out;
+
+        &:hover {
+          box-shadow: 0 0 1rem 0 var.$moreBoxShadow;
+        }
+      
       }
     }
   }
