@@ -52,6 +52,21 @@ main {
     }
 }
 
+@mixin fadeupanimation (){
+  // opacity: 0;
+  animation: fadeUp 1s ease-in-out;
+  animation: 2s;
+}
+
+.scrollTrigger {
+  position: fixed;
+  bottom: calc(40% - 7rem);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  // background: red;
+}
+
 #cursor {
     position: absolute;
     top: -100%;
@@ -348,79 +363,98 @@ header {
     width: 100%;
     display: grid;
     margin-top: 7rem;
-    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     // border: 2px solid red;
+    // animation: fadeUp 1s ease-in-out;
 
-    ul  li {
-      list-style: none;
-      a {
-        position: relative;
-        width: 100%;
-        text-decoration: none;
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        gap: 2rem;
-        font-size: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.358);
-        transition: background-color 0.3s ease-in-out;
-        overflow: hidden;
+    @keyframes fadeUp {
+      from {
+          opacity: 0;
+          transform: translateY(3rem);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+    }
 
-        .project-box {
-            display: none;
-            position: fixed;
-            bottom: 5rem;
-            left: 5rem;
-            width: 30rem;
-            max-height: 20rem;
-            z-index: 99;
-            img {
-                width: 100%;
-                border-radius: 1rem;
-            }
-        }
-
-        .project-technologies {
+    ul{
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 1s;
+      opacity: 0;
+      li {
+        list-style: none;
+        a {
+          position: relative;
+          width: 100%;
+          text-decoration: none;
+          padding: 1rem 2rem;
           display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-            span {
-              font-family: unset;
-              text-transform: capitalize;
-              font-size: x-small;
-              padding: 5px 10px;
-              border-radius: 1rem;
-              color: var.$secondary-text-color;
-              border: 1px solid var.$secondary-text-color;
+          justify-content: space-between;
+          gap: 2rem;
+          font-size: 2rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.358);
+          transition: background-color 0.3s ease-in-out;
+          overflow: hidden;
+
+          .project-box {
+              display: none;
+              position: fixed;
+              bottom: 5rem;
+              left: 5rem;
+              width: 30rem;
+              max-height: 20rem;
+              z-index: 99;
+              img {
+                  width: 100%;
+                  border-radius: 1rem;
+              }
+          }
+
+          .project-technologies {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            // @include fadeupanimation();
+              span {
+                font-family: unset;
+                text-transform: capitalize;
+                font-size: x-small;
+                padding: 5px 10px;
+                border-radius: 1rem;
+                color: var.$secondary-text-color;
+                border: 1px solid var.$secondary-text-color;
+              }
+            }
+            
+            p {
+              // width: 100%;
+              // border: 2px solid blue;
+              text-align: center;
+              // @include fadeupanimation();
+            }
+            
+            span, p{
+              font-family: cursive;
+            }
+
+          &:last-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.358);
+          }
+
+          &:hover {
+            background-color: var(--special-color);
+
+            span,
+            p {
+              color: var.$primary-background-color;
             }
           }
           
-          p {
-            // width: 100%;
-            // border: 2px solid blue;
-            text-align: center;
+          &:hover .project-box {
+            display: block;
           }
-          
-          span, p{
-            font-family: cursive;
-          }
-
-        &:last-child {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.358);
-        }
-
-        &:hover {
-          background-color: var(--special-color);
-
-          span,
-          p {
-            color: var.$primary-background-color;
-          }
-        }
-        
-        &:hover .project-box {
-          display: block;
         }
       }
     }
