@@ -63,6 +63,9 @@
 
 @media screen and (max-width: 768px) {
     body main{
+        #cursor {
+            display: none;
+        }
         #intro {
             .text {
                 gap: 2rem;
@@ -164,5 +167,24 @@
                 }
             }
         }
+        #projects .projects-outerBox ul li a .project-box {
+            display: none;
+        }
     }
+}
+
+@media screen and (max-width: 570px) {
+    body main {
+        header .last {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+        #projects .projects-outerBox ul li a {
+            flex-direction: column;
+        }
+    } 
 }

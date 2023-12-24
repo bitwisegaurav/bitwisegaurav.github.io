@@ -52,6 +52,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  body main #cursor {
+    display: none;
+  }
   body main #intro .text {
     gap: 2rem;
   }
@@ -132,6 +135,20 @@
   body main #intro .sidepart .sidebox img {
     width: 100%;
     height: unset;
+  }
+  body main #projects .projects-outerBox ul li a .project-box {
+    display: none;
+  }
+}
+@media screen and (max-width: 570px) {
+  body main header .last .nav-links {
+    display: none;
+  }
+  body main header .last .hamburger {
+    display: block;
+  }
+  body main #projects .projects-outerBox ul li a {
+    flex-direction: column;
   }
 }
 :root {
@@ -247,6 +264,77 @@ header nav .last button {
 }
 header nav .last button:hover {
   box-shadow: 0 0 1rem 0 rgba(255, 231, 76, 0.1);
+}
+header nav .last .hamburger {
+  display: none;
+}
+header nav .last .hamburger .menu {
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+header nav .last .hamburger .menu:hover {
+  box-shadow: none;
+}
+header nav .last .hamburger .line {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+header nav .last .hamburger .line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+header nav .last .hamburger .line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+header nav .last .hamburger .line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+header nav .last .hamburger .opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+header nav .last .hamburger .opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+header nav .last .hamburger .opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+header .navbar {
+  display: none;
+  background-color: #181818;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  transition: transfrom 0.3s ease-in-out;
+}
+header .navbar .links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+}
+header .navbar .links a {
+  text-decoration: none;
+  border-top: 1px solid #aaa;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
 }
 
 #intro {
@@ -418,6 +506,11 @@ header nav .last button:hover {
 #projects .projects-outerBox ul li a .project-box img {
   width: 100%;
   border-radius: 1rem;
+}
+#projects .projects-outerBox ul li a .project-technologies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #projects .projects-outerBox ul li a .project-technologies span {
   font-family: unset;
