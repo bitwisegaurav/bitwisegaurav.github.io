@@ -511,6 +511,7 @@ header .navbar .links a {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 #projects .projects-outerBox ul li a .project-technologies span {
   font-family: unset;
