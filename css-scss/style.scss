@@ -221,10 +221,20 @@ header {
 
       a{
         text-decoration: none;
-        border-top: 1px solid var.$secondary-text-color;
+        border-top: 1px solid rgba(255, 255, 255, 0.358);
         width: 100%;
         text-align: center;
         padding: 1rem;
+        color: var.$secondary-text-color;
+      }
+
+      .active {
+        color: var.$primary-text-color;
+
+        &::before {
+          content: '⬤  ';
+          color: var.$special-color;
+        }
       }
     }
   }
