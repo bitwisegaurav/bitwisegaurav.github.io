@@ -27,8 +27,9 @@
                         <a href="#intro" class="active">Intro</a>
                         <a href="#projects">Projects</a>
                         <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
                     </div>
-                    <button type="button" class="largecursor cursorcolor">Hire Me</button>
+                    <button type="button" id="hireme" class="largecursor cursorcolor">Hire Me</button>
                     <div class="hamburger">
                         <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
                             <svg width="100%" height="100%" viewBox="0 0 100 100">
@@ -45,10 +46,11 @@
                     <a href="#intro">Intro</a>
                     <a href="#projects">Projects</a>
                     <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
         </header>
-        <section id="intro">
+        <section id="intro" class="main-link">
             <div class="text">
                 <h1>Hello, My <user>User</user>Name is <name id="introName" class="type largecursor cursorcolor">BitwiseGaurav</name>
                 </h1>
@@ -60,7 +62,7 @@
                 </div>
             </div>
         </section>
-        <section id="projects">
+        <section id="projects" class="main-link">
             <div id="projects-title">Projects</div>
             <!-- <div class="project-box">
                 <img src="images/codevengers.png" alt="Codevengers">
@@ -137,7 +139,7 @@
             </div>
         </section>
         <div class="about-outerBox">
-            <section id="about">
+            <section id="about" class="main-link">
                 <div class="side-section">
                     <div class="my-image cursorcolor">
                         <img src="potraits/potrait2.png" alt="my-image">
@@ -156,7 +158,7 @@
                 </div>
             </section>
         </div>
-        <footer>
+        <footer id="contact" class="main-link">
             <div class="left-section">
                 <div class="upper">
                     <div class="logo cursorcolor">
@@ -204,4 +206,5 @@
 <!-- <script defer src="js/locomotive.js"></script> -->
 <script defer src="js/gsap.js"></script>
 <script defer src="js/scrollTrigger.js"></script>
+<script src="js/hireme.js"></script>
 </html>
