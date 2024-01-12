@@ -3,7 +3,7 @@ const navbar = document.querySelector('.navbar');
 const links = navbar.querySelectorAll('.links a');
 
 hamburger.addEventListener('click', () => {
-    console.log('clicked');
+    // console.log('clicked');
     let opened = hamburger.querySelector('button').classList.contains('opened');
     navbar.style.display = opened ? "block" : "none";
 })
