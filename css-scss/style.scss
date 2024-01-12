@@ -1,5 +1,6 @@
 @use "var";
 @use 'media';
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
 
 :root{
   --special-color : #{var.$special-color};
@@ -30,6 +31,11 @@ body {
 
 main {
     width: 100%;
+}
+
+// remove the scrollbar from main
+main::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
 }
 
 @mixin logo {
@@ -436,7 +442,7 @@ header {
             }
             
             span, p{
-              font-family: cursive;
+              font-family: var.$logo-font;
             }
 
           &:last-child {
