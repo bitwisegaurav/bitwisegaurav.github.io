@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Charm&display=swap");
 @media screen and (max-width: 1200px) {
   body main #intro {
@@ -55,6 +56,12 @@
 @media screen and (max-width: 768px) {
   body main #cursor {
     display: none;
+  }
+  body main header .last .nav-links {
+    display: none;
+  }
+  body main header .last .hamburger {
+    display: block;
   }
   body main #intro .text {
     gap: 2rem;
@@ -127,6 +134,11 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 570px) {
+  body main #projects .projects-outerBox ul li a {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 500px) {
   body main #intro .sidepart .sidebox {
     width: 80vw;
@@ -139,17 +151,6 @@
   }
   body main #projects .projects-outerBox ul li a .project-box {
     display: none;
-  }
-}
-@media screen and (max-width: 570px) {
-  body main header .last .nav-links {
-    display: none;
-  }
-  body main header .last .hamburger {
-    display: block;
-  }
-  body main #projects .projects-outerBox ul li a {
-    flex-direction: column;
   }
 }
 :root {
@@ -344,10 +345,18 @@ header .navbar .links {
 }
 header .navbar .links a {
   text-decoration: none;
-  border-top: 1px solid #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.358);
   width: 100%;
   text-align: center;
   padding: 1rem;
+  color: #aaa;
+}
+header .navbar .links .active {
+  color: #eee;
+}
+header .navbar .links .active::before {
+  content: "⬤  ";
+  color: #FFE74C;
 }
 
 #intro {

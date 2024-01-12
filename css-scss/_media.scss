@@ -66,6 +66,14 @@
         #cursor {
             display: none;
         }
+        header .last {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
         #intro {
             .text {
                 gap: 2rem;
@@ -153,6 +161,14 @@
     }
 }
 
+@media screen and (max-width: 570px) {
+    body main {
+        #projects .projects-outerBox ul li a {
+            flex-direction: column;
+        }
+    } 
+}
+
 @media screen and (max-width: 500px) {
     body main {
         #intro {
@@ -171,20 +187,4 @@
             display: none;
         }
     }
-}
-
-@media screen and (max-width: 570px) {
-    body main {
-        header .last {
-            .nav-links {
-                display: none;
-            }
-            .hamburger {
-                display: block;
-            }
-        }
-        #projects .projects-outerBox ul li a {
-            flex-direction: column;
-        }
-    } 
 }
