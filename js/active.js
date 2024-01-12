@@ -1,5 +1,5 @@
+let sections = document.querySelectorAll(".main-link");
 window.addEventListener("scroll", function () {
-  let sections = document.querySelectorAll("section");
   let currentSection = null;
 
   // console.log(sections);
@@ -17,11 +17,13 @@ window.addEventListener("scroll", function () {
       navItem.classList.remove("active");
     });
 
-    let currentNavItem = document.querySelector(
+    let currentNavItems = document.querySelectorAll(
       '[href="#' + currentSection.id + '"]'
     );
-    if (currentNavItem !== null) {
-      currentNavItem.classList.add("active");
+    if (currentNavItems !== null) {
+      currentNavItems.forEach(function(currentNavItem) {
+        currentNavItem.classList.add("active");
+      })
     }
   }
 });
