@@ -21,7 +21,7 @@ const technologies = [
     // {name : "github", backgroundColor: "#eee", color: "#181818",},
 ]
 
-technologies.forEach(tech => {
+technologies.forEach(tech => {``
     const techBox = document.createElement('div');
     techBox.classList.add('tech');
     techBox.innerText = tech.name;
