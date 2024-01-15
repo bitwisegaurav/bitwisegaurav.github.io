@@ -1,11 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="images/portfolio-logo.png" type="image/png">
+    <link rel="stylesheet" href="css-scss/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> -->
+    <title>BitwiseGaurav - Portfolio</title>
 </head>
+
 <body>
-    <h1>Processing...</h1>
+    <main>
+        <div class="scrollTrigger"></div>
+        <div id="cursor"></div>
+        <header>
+            <nav>
+                <div class="logo cursorcolor">
+                    <p>BG</p>
+                </div>
+                <div class="last">
+                    <div class="nav-links">
+                        <a href="#intro" class="active">Intro</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <button type="button" id="hireme" class="largecursor cursorcolor">Hire Me</button>
+                    <div class="hamburger">
+                        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                            <svg width="100%" height="100%" viewBox="0 0 100 100">
+                              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                              <path class="line line2" d="M 20,50 H 80" />
+                              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="navbar">
+                <div class="links">
+                    <a href="#intro">Intro</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </header>
+        <section id="intro" class="main-link">
+            <div class="text">
+                <h1>Hello, My <user>User</user>Name is <name id="introName" class="type largecursor cursorcolor">BitwiseGaurav</name>
+                </h1>
+                <p>A Full Stack Web Developer</p>
+            </div>
+            <div class="sidepart">
+                <div class="sidebox cursorcolor">
+                    <img src="images/Blogging-bro.svg" alt="Intro image">
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="main-link">
+            <div id="projects-title">Projects</div>
+            <!-- <div class="project-box">
+                <img src="images/codevengers.png" alt="Codevengers">
+            </div> -->
+            <div class="projects-outerBox">
+                <ul>
+                    <li>
+                        <a href="https://bitwisegaurav.github.io/codevengers" class="largecursor cursorcolor">
+                            <p>Codevengers</p>
+                            <div class="project-technologies">
+                                <span>html</span>
+                                <span>css</span>
+                                <span>js</span>
+                                <span>php</span>
+                                <span>mysql</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="working.html" class="largecursor cursorcolor">
+                            <p>Blogesation</p>
+                            <div class="project-technologies">
+                                <span>html</span>
+                                <span>css</span>
+                                <span>js</span>
+                                <span>php</span>
+                                <span>mysql</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bitwisegaurav.github.io/sudoku" class="largecursor cursorcolor">
+                            <p>SudokuNova</p>
+                            <div class="project-technologies">
+                                <span>html</span>
+                                <span>css</span>
+                                <span>js</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bitwisegaurav.github.io/ReactWebsite" class="largecursor cursorcolor">
+                            <p>ReactWebsite</p>
+                            <div class="project-technologies">
+                                <span>react</span>
+                                <span>js</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bitwisegaurav.github.io/typengers" class="largecursor cursorcolor">
+                            <p>Typengers</p>
+                            <div class="project-technologies">
+                                <span>html</span>
+                                <span>css</span>
+                                <span>js</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="working.html" class="largecursor cursorcolor">
+                            <p>ContactPage</p>
+                            <div class="project-technologies">
+                                <span>react</span>
+                                <span>react-router</span>
+                                <span>js</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="projects-lower">
+                <a href="projects.html" class="cursorcolor">See More Projects <arrow>&rightarrow;</arrow> </a>
+            </div>
+        </section>
+        <div class="about-outerBox">
+            <section id="about" class="main-link">
+                <div class="side-section">
+                    <div class="my-image cursorcolor">
+                        <img src="potraits/potrait2.png" alt="my-image">
+                    </div>
+                </div>
+                <div class="about-me">
+                    <div class="about-title">About Me</div>
+                    <div class="about-desc">
+                        <p>Hello there 👋, I'm <name class="largecursor cursorcolor">Gaurav Mishra</name> aka <name class="largecursor cursorcolor">BitwiseGaurav</name>, a highly skilled <b>full stack developer</b> with a wide range of expertise in web development and programming. I have a strong foundation in essential web technologies such as HTML, CSS, and JavaScript. I have built a reputation for delivering innovative and functional web solutions. I have created various projects, including "codevengers", "ReactLearning", "Blogesation", and some other projects.</p>
+                        <p>I have also won two trophies 🏆 in debugging competitions, securing <b>3rd</b> and <b>1st</b> positions respectively. These achievements have instilled in me a sense of discipline and perseverance, which I bring to every project I work on. I am excited to bring my skills and experience to a new role and contribute to a team of developers.</p>
+                    </div>
+                    <div class="technology-title">Technologies</div>
+                    <div class="technologies">
+                        <!-- <div class="tech">HTML</div> -->
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer id="contact" class="main-link">
+            <div class="left-section">
+                <div class="upper">
+                    <div class="logo cursorcolor">
+                        <p>BG</p>
+                    </div>
+                    <div class="social-links">
+                            <a href="https://github.com/BitwiseGaurav" target="_blank" rel="noopener" id="github">Github</a>
+                            <a href="https://replit.com/@BitwiseGaurav" target="_blank" rel="noopener" id="replit">Replit</a>
+                            <a href="https://linkedin.com/in/BitwiseGaurav" target="_blank" rel="noopener" id="linkedin">Linkedin</a>
+                            <a href="https://instagram.com/BitwiseGaurav" target="_blank" rel="noopener" id="instagram">Instagram</a>
+                            <a href="https://x.com/BitwiseGaurav" target="_blank" rel="noopener" id="x">X</a>
+                    </div>
+                </div>
+                <div class="lower">
+                    <q class="largecursor">योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय ।
+                    सिद्ध्यसिद्धयोः समो भूत्वा समत्वं योग उच्यते ॥</q>
+                </div>
+            </div>
+            <p class="line"></p>
+            <div class="right-section">
+                <div class="contact-form">
+                    <div class="contact-title">Contact Me</div>
+                    <form action="mailto:gauravmishra2401@gmail.com" method="post">
+                        <label for="name">Name : </label>
+                        <input type="text" name="name" id="name" title="Enter your name" placeholder="Your name">
+                        <label for="message">Message : </label>
+                        <textarea name="message" id="message" cols="30" rows="5" title="Enter your message" placeholder="Your Message"></textarea>
+                        <button type="submit" class="cursorcolor">Connect With Me</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </main>
 </body>
+<!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="js/header.js"></script>
+<script defer src="js/hamburger.js"></script>
+<script defer src="js/intro.js"></script>
+<script defer src="js/active.js"></script>
+<script defer src="js/cursor.js"></script>
+<script defer src="js/projects.js"></script>
+<script defer src="js/technologies.js"></script>
+<!-- <script defer src="js/locomotive.js"></script> -->
+<script defer src="js/gsap.js"></script>
+<script defer src="js/scrollTrigger.js"></script>
+<script defer src="js/hireme.js"></script>
 </html>
