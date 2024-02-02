@@ -840,6 +840,7 @@ footer .right-section .contact-form form input, footer .right-section .contact-f
   border-radius: 1rem;
   margin-bottom: 20px;
   resize: none;
+  color: #181818;
 }
 footer .right-section .contact-form form button {
   padding: 10px;
