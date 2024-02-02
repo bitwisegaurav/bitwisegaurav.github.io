@@ -1,14 +1,60 @@
+const projectsBox = document.querySelector('.projects-outerBox');
 const projects = document.querySelectorAll('.projects-outerBox a');
+const projectsData = [
+    {
+        title: "Codevengers",
+        url: "https://bitwisegaurav.github.io/codevengers",
+        techs: ["HTML", "CSS", "Js", "Php", "MySQL"],
+    },
+    {
+        title: "Blogesation",
+        url: "https://bitwisegaurav.github.io/blogesation",
+        techs: ["HTML", "CSS", "Js", "Php", "MySQL"],
+    },
+    {
+        title: "SudokuNova",
+        url: "https://bitwisegaurav.github.io/sudoku",
+        techs: ["HTML", "CSS", "Js"],
+    },
+    {
+        title: "ReactWebsite",
+        url: "https://bitwisegaurav.github.io/ReactWebsite",
+        techs: ["React", "CSS", "Js"],
+    },
+    {
+        title: "Typengers",
+        url: "https://bitwisegaurav.github.io/typengers",
+        techs: ["HTML", "CSS", "Js"],
+    },
+    {
+        title: "ContactPage",
+        url: null,
+        techs: ["React", "React-Router", "Js"],
+    }
+];
 
-projects.forEach(project => {
-    // project.addEventListener('mouseenter', (e) => {
-        const projectImageBox = document.createElement('div');
-        projectImageBox.classList.add("project-box");
-        const projectName = project.querySelector('p').innerText;
-        projectImageBox.innerHTML = `<img src="images/${projectName.toLowerCase()}.png" alt="${projectName}">`;
-        project.insertAdjacentElement("beforeend", projectImageBox);
-    // })
-})
+(function (){
+    let projectsContent = '';
+    projectsData.forEach(project => {
+        projectsContent += `<li>
+            <a href="${project.url ? project.url : 'working.html'}" class="largecursor cursorcolor">
+                <p>${project.title}</p>
+                <div class="project-technologies">
+                    ${
+                        project.techs.map(tech => {
+                            return `<span>${tech}</span>`;
+                        }).join('')
+                    }
+                </div>
+                <div class="project-box">
+                    <img src="images/${project.title.toLowerCase()}.png" alt="${project.title}">
+                </div>
+            </a>
+        </li>`
+    })
+    projectsBox.querySelector('ul').innerHTML = projectsContent;
+    // console.log(projectsContent);
+})();
 
 window.addEventListener("mousemove", (e) => {
     const projectImageBoxs = document.querySelectorAll(".project-box");
