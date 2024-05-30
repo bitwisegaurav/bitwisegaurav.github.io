@@ -42,6 +42,11 @@
                         <a href="#contact">Contact</a>
                     </div>
                     <button type="button" id="hireme" class="largecursor cursorcolor">Hire Me</button>
+                    <div class="colorpicker">
+                        <div class="colors">
+                            <div class="color cursorcolor activeColor" value="#FFE74C"></div>
+                        </div>
+                    </div>
                     <div class="hamburger">
                         <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
                             <svg width="100%" height="100%" viewBox="0 0 100 100">
@@ -70,7 +75,7 @@
             </div>
             <div class="sidepart">
                 <div class="sidebox cursorcolor">
-                    <img src="images/Blogging-bro.svg" alt="Intro image">
+                    <img src="images/Blogging-bro.svg" alt="Intro image" id="introimage">
                 </div>
             </div>
         </section>
@@ -156,4 +161,5 @@
 <script defer src="js/scrollTrigger.js"></script>
 <script defer src="js/hireme.js"></script>
 <script defer src="js/form.js"></script>
+<script defer src="js/colorpicker.js"></script>
 </html>
