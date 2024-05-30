@@ -1,6 +1,7 @@
 const cursor = document.getElementById('cursor');
 const largeCursorBoxes = document.querySelectorAll('.largecursor');
 const cursorColorBoxes = document.querySelectorAll('.cursorcolor');
+let mouseLightColor = "#FFE74C", mouseDarkColor = "#968200";
 
 window.addEventListener('mousemove', (e) => {
     cursor.style.top = e.pageY + 'px';
@@ -22,9 +23,9 @@ largeCursorBoxes.forEach(box => {
 
 cursorColorBoxes.forEach(box => {
     box.addEventListener('mouseenter', (e) => {
-        cursor.style.borderColor = "#968200";
+        cursor.style.borderColor = mouseDarkColor;
     })
     box.addEventListener('mouseleave', (e) => {
-        cursor.style.borderColor = "#FFE74C";
+        cursor.style.borderColor = mouseLightColor;
     })
 })
