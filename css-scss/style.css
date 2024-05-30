@@ -405,7 +405,7 @@ header .navbar .links .active {
 }
 header .navbar .links .active::before {
   content: "⬤  ";
-  color: #FFE74C;
+  color: var(--special-color);
 }
 
 #intro {

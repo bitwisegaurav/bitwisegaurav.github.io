@@ -295,7 +295,7 @@ header {
 
         &::before {
           content: '⬤  ';
-          color: var.$special-color;
+          color: var(--special-color);
         }
       }
     }
