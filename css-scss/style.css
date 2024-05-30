@@ -326,6 +326,7 @@ header nav .last .colorpicker .colors .activeColor:hover:after {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: rotateZ(90deg);
 }
 header nav .last .hamburger {
   display: none;
