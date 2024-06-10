@@ -4,11 +4,11 @@ const projectsData = [
     {
         title: "Codevengers",
         url: "https://bitwisegaurav.github.io/codevengers",
-        techs: ["HTML", "CSS", "Js", "Php", "MySQL"],
+        techs: ["HTML", "CSS", "Js", "SCSS", "Php", "MySQL"],
     },
     {
-        title: "Blogesation",
-        url: "https://bitwisegaurav.github.io/blogesation",
+        title: "Twizzer",
+        url: "https://bitwisegaurav.github.io/twizzer",
         techs: ["HTML", "CSS", "Js", "Php", "MySQL"],
     },
     {
