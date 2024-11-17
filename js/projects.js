@@ -8,7 +8,7 @@ const projectsData = [
     },
     {
         title: "Blogesation",
-        url: "https://bitwisegaurav.github.io/blogesation",
+        url: "https://bitwisegaurav.github.io/twizzer",
         techs: ["HTML", "CSS", "Js", "Php", "MySQL"],
     },
     {
