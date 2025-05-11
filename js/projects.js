@@ -26,6 +26,11 @@ const projectsData = [
         url: null,
         techs: ["React Native", "Typescript", "Stripe"],
     },
+    {
+        title: "Weather App",
+        url: null,
+        techs: ["Expo", "React Native"],
+    },
 ];
 
 (function () {

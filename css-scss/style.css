@@ -588,7 +588,7 @@ header .navbar .links .active::before {
   bottom: 5rem;
   left: 5rem;
   height: 22rem;
-  aspect-ratio: 1/2;
+  aspect-ratio: 375/812;
   z-index: 99;
 }
 #projects .projects-outerBox ul li a .project-box img {
