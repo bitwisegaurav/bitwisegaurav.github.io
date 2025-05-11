@@ -481,10 +481,11 @@ header {
               position: fixed;
               bottom: 5rem;
               left: 5rem;
-              width: 30rem;
-              max-height: 20rem;
+              height: 22rem;
+              max-width: 12rem;
               z-index: 99;
               img {
+                  height: 100%;
                   width: 100%;
                   border-radius: 1rem;
               }

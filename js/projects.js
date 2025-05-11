@@ -33,21 +33,20 @@ const projectsData = [
     }
 ];
 
-(function (){
+(function () {
     let projectsContent = '';
     projectsData.forEach(project => {
         projectsContent += `<li>
             <a href="${project.url ? project.url : 'working.html'}" class="largecursor cursorcolor">
                 <p>${project.title}</p>
                 <div class="project-technologies">
-                    ${
-                        project.techs.map(tech => {
-                            return `<span>${tech}</span>`;
-                        }).join('')
-                    }
+                    ${project.techs.map(tech => {
+            return `<span>${tech}</span>`;
+        }).join('')
+            }
                 </div>
                 <div class="project-box">
-                    <img src="images/${project.title.toLowerCase()}.png" alt="${project.title}">
+                    <img src="images/${project.title.toLowerCase().replaceAll(" ", "")}.png" alt="${project.title}">
                 </div>
             </a>
         </li>`
@@ -73,12 +72,16 @@ window.addEventListener("mousemove", (e) => {
         // Calculate the position of the project image box
         let top = e.clientY - yoffset;
         let left = e.clientX + yoffset;
+        let bottom = e.clientY + yoffset;
 
         // Check if the project image box is too close to the top or left of the screen
         if (top < 120) {
             top = 120;
         }
 
+        if (bottom > windowHeight - 100) {
+            top = top - projectImageBoxHeight + yoffset;
+        }
         // if(top + 2*yoffset > windowHeight - 100){
         //     top = top - projectImageBoxHeight + yoffset;
         // }
@@ -86,7 +89,7 @@ window.addEventListener("mousemove", (e) => {
 
         // Check if the project image box is too close to the bottom or right of the screen
         if (left + projectImageBoxWidth > windowWidth) {
-            left = left - projectImageBoxWidth - 2*xoffset;
+            left = left - projectImageBoxWidth - 2 * xoffset;
         }
         projectImageBox.style.left = left + "px";
 
