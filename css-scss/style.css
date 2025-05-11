@@ -155,6 +155,7 @@
 }
 :root {
   --special-color: #FFE74C;
+  --shadow-color: rgba(255, 231, 76, 0.3);
 }
 
 * {
@@ -504,15 +505,15 @@ header .navbar .links .active::before {
   aspect-ratio: 1/1;
   border-radius: 50% 30% 50% 24%;
   background-color: var(--special-color);
-  box-shadow: 0 0 8rem 0 rgba(255, 231, 76, 0.3);
+  box-shadow: 0 0 8rem 0 var(--shadow-color);
   animation: glowup alternate 3s infinite;
 }
 @keyframes glowup {
   from {
-    box-shadow: 0 0 1rem 0 rgba(255, 231, 76, 0.3);
+    box-shadow: 0 0 1rem 0 var(--shadow-color);
   }
   to {
-    box-shadow: 0 0 8rem 0 rgba(255, 231, 76, 0.3);
+    box-shadow: 0 0 8rem 0 var(--shadow-color);
   }
 }
 #intro::after {
@@ -688,7 +689,11 @@ header .navbar .links .active::before {
 }
 .about-outerBox #about .side-section .my-image {
   position: relative;
-  width: 80%;
+  width: 100%;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
 }
 .about-outerBox #about .side-section .my-image::before {
   content: "";
@@ -696,15 +701,14 @@ header .navbar .links .active::before {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 70%;
+  height: 100%;
   background-color: var(--special-color);
   z-index: 1;
   border-radius: 15rem 8rem 18rem 12rem;
 }
 .about-outerBox #about .side-section .my-image img {
   position: relative;
-  border-radius: 0 0 18rem 12rem;
-  width: 100%;
+  width: 80%;
   z-index: 2;
 }
 .about-outerBox #about .about-me {
@@ -713,7 +717,6 @@ header .navbar .links .active::before {
 .about-outerBox #about .about-me .about-title {
   width: 100%;
   font-size: 4rem;
-  margin-top: 4rem;
   margin-bottom: 6rem;
 }
 .about-outerBox #about .about-me .about-title::-moz-selection {

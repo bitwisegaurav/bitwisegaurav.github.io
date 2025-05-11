@@ -1,13 +1,14 @@
 const lightcolors = [
-    {color : "#FFE74C", darkColor: "#968200", imageHue: "0deg"},
-    {color : "#6BF178", darkColor: "#4baf55", imageHue: "60deg"},
-    {color : "#91cfff", darkColor: "#2c7cb9", imageHue: "170deg"},
-    {color : "#FF7F18", darkColor: "#994e11", imageHue: "-20deg"},
-    {color : "#EE82EE", darkColor: "#8B008B", imageHue: "270deg"},
-    {color : "#FF9AA2", darkColor: "#75474a", imageHue: "-65deg"},
+    { color: "#FFE74C", darkColor: "#968200", imageHue: "0deg" },
+    { color: "#6BF178", darkColor: "#4baf55", imageHue: "60deg" },
+    { color: "#91cfff", darkColor: "#2c7cb9", imageHue: "170deg" },
+    { color: "#FF7F18", darkColor: "#994e11", imageHue: "-20deg" },
+    { color: "#EE82EE", darkColor: "#8B008B", imageHue: "270deg" },
+    { color: "#FF9AA2", darkColor: "#75474a", imageHue: "-65deg" },
 ]
 const colorpickerBox = document.querySelector('.colorpicker');
 const introImageBox = document.getElementById("introimage");
+const myImage = document.getElementById("my-image");
 let activeColorForWebpage = "#FFE74C";
 
 function addColors() {
@@ -29,7 +30,7 @@ function setDisplay() {
     const colors = colorpickerBox.querySelectorAll('.color');
 
     colors.forEach(color => {
-        if(color.classList.contains("activeColor")) {
+        if (color.classList.contains("activeColor")) {
             color.style.display = "flex";
         } else {
             color.style.display = "none";
@@ -41,14 +42,14 @@ function changeColors() {
     const colors = colorpickerBox.querySelectorAll('.color');
 
     colors.forEach(color => {
-        color.addEventListener('click', function() {
-            if(color.classList.contains('activeColor')) {
+        color.addEventListener('click', function () {
+            if (color.classList.contains('activeColor')) {
                 let allColorsHidden = false;
-                if(colors.length < 2) return;
+                if (colors.length < 2) return;
 
-                if(colors[colors.length - 1].style.display === "none") allColorsHidden = true;
+                if (colors[colors.length - 1].style.display === "none") allColorsHidden = true;
 
-                if(allColorsHidden) {
+                if (allColorsHidden) {
                     colors.forEach(color1 => {
                         color1.style.display = "flex";
                     })
@@ -67,10 +68,16 @@ function changeColors() {
                 const selectedDarkColor = color.getAttribute('darkColor');
                 const selectedImageHue = color.getAttribute('imageHue');
                 document.documentElement.style.setProperty('--special-color', selectedColor);
+                document.documentElement.style.setProperty('--shadow-color', selectedColor + '88');
                 mouseLightColor = selectedColor;
                 mouseDarkColor = selectedDarkColor;
                 cursor.style.borderColor = selectedColor
                 introImageBox.style.filter = `hue-rotate(${selectedImageHue})`;
+                myImage.style.filter = `hue-rotate(${selectedImageHue})`;
+                colors.forEach(color1 => {
+                    color1.style.display = "none";
+                })
+                color.style.display = "flex";
                 // addColors();
             }
         })

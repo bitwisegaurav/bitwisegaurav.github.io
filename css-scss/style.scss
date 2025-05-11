@@ -4,6 +4,7 @@
 
 :root{
   --special-color : #{var.$special-color};
+  --shadow-color: #{var.$sideBoxShadow};
 }
 
 * {
@@ -396,17 +397,17 @@ header {
       aspect-ratio: 1/1;
       border-radius: 50% 30% 50% 24%;
       background-color: var(--special-color);
-      box-shadow: 0 0 8rem 0 var.$sideBoxShadow;
+      box-shadow: 0 0 8rem 0 var(--shadow-color);
       animation: glowup alternate 3s infinite;
     }
   }
 
     @keyframes glowup {
         from {
-            box-shadow: 0 0 1rem 0 var.$sideBoxShadow;
+            box-shadow: 0 0 1rem 0 var(--shadow-color);
         }
         to {
-            box-shadow: 0 0 8rem 0 var.$sideBoxShadow;
+            box-shadow: 0 0 8rem 0 var(--shadow-color);
         }
     }
 
@@ -603,7 +604,11 @@ header {
 
       .my-image {
         position: relative;
-        width: 80%;
+        width: 100%;
+        margin-top: 6rem;
+        display: flex;
+        justify-content: center;
+        padding: 4rem 1rem;
         // border: 2px solid red;
 
         &::before {
@@ -612,15 +617,14 @@ header {
           bottom: 0;
           left: 0;
           width: 100%;
-          height: 70%;
+          height: 100%;
           background-color: var(--special-color);
           z-index: 1;
           border-radius: 15rem 8rem 18rem 12rem;
         }
         img {
           position: relative;
-          border-radius: 0 0 18rem 12rem;
-          width: 100%;
+          width: 80%;
           z-index: 2;
         }
       }
@@ -632,7 +636,6 @@ header {
       .about-title {
         width: 100%;
         font-size: 4rem;
-        margin-top: 4rem;
         margin-bottom: 6rem;
         @include titleSelection;
       }
