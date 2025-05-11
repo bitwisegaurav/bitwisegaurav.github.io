@@ -59,7 +59,7 @@ window.addEventListener("mousemove", (e) => {
     const projectImageBoxs = document.querySelectorAll(".project-box");
 
     const xoffset = window.innerWidth > 800 ? 100 : 60;
-    const yoffset = xoffset;
+    const yoffset = 100;
     projectImageBoxs.forEach(projectImageBox => {
         const projectImageBoxWidth = projectImageBox.clientWidth;
         const projectImageBoxHeight = projectImageBox.clientHeight;
@@ -71,16 +71,17 @@ window.addEventListener("mousemove", (e) => {
 
         // Calculate the position of the project image box
         let top = e.clientY - yoffset;
-        let left = e.clientX + yoffset;
-        let bottom = e.clientY + yoffset;
+        let left = e.clientX + xoffset;
+        let bottom = e.clientY + yoffset + projectImageBoxHeight / 2;
 
         // Check if the project image box is too close to the top or left of the screen
-        if (top < 120) {
-            top = 120;
+        if (top < yoffset) {
+            top = yoffset;
         }
 
-        if (bottom > windowHeight - 100) {
-            top = top - projectImageBoxHeight + yoffset;
+        if (bottom > windowHeight - 40) {
+            // top = top - projectImageBoxHeight + yoffset;
+            top = windowHeight - projectImageBoxHeight - 40;
         }
         // if(top + 2*yoffset > windowHeight - 100){
         //     top = top - projectImageBoxHeight + yoffset;

@@ -587,7 +587,7 @@ header .navbar .links .active::before {
   position: fixed;
   bottom: 5rem;
   left: 5rem;
-  height: 22rem;
+  height: 50vh;
   aspect-ratio: 375/812;
   z-index: 99;
 }
