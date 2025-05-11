@@ -1,27 +1,20 @@
 const technologyBox = document.querySelector('.technologies');
 const technologies = [
-    {name : "html", backgroundColor: "#FB4D29", color: "#eee",},
-    {name : "css", backgroundColor: "rgb(1,119,189)", color: "#eee",},
-    {name : "javascript", backgroundColor: "rgb(255,225,58)", color: "#181818",},
-    {name : "tailwind", backgroundColor: "#40B1AB", color: "#181818",},
-    {name : "sass", backgroundColor: "#E967B0", color: "#eee",},
-    // {name : "scss", backgroundColor: "#E967B0", color: "#eee",},
-    {name : "react", backgroundColor: "#087EA4", color: "#eee",},
-    {name : "typescript", backgroundColor: "#2A7CC7", color: "#eee",},
-    {name : "php", backgroundColor: "#464b85", color: "#eee",},
-    {name : "node js", backgroundColor: "#417B36", color: "#eee",},
-    {name : "mysql", backgroundColor: "#bb6600", color: "#eee",},
-    {name : "mongo db", backgroundColor: "#3B9656", color: "#eee",},
-    // {name : "express js", backgroundColor: "#eee", color: "#181818",},
-    // {name : "socket io", backgroundColor: "#eee", color: "#181818",},
-    {name : "c", backgroundColor: "#02599C", color: "#eee",},
-    {name : "c++", backgroundColor: "#02599C", color: "#eee",},
-    {name : "java", backgroundColor: "#EC3C26", color: "#eee",},
-    {name : "git", backgroundColor: "#eee", color: "#181818",},
-    // {name : "github", backgroundColor: "#eee", color: "#181818",},
-]
+    { name: "react native", backgroundColor: "#61DAFB", color: "#181818", },
+    { name: "expo", backgroundColor: "#000020", color: "#eee", },
+    { name: "javascript", backgroundColor: "rgb(255,225,58)", color: "#181818", },
+    { name: "typescript", backgroundColor: "#2A7CC7", color: "#eee", },
+    { name: "react", backgroundColor: "#087EA4", color: "#eee", },
+    { name: "react query", backgroundColor: "#FF4154", color: "#eee", },
+    { name: "redux toolkit", backgroundColor: "#764ABC", color: "#eee", },
+    { name: "android studio", backgroundColor: "#3DDC84", color: "#181818", },
+    { name: "xcode", backgroundColor: "#1575F9", color: "#eee", },
+    { name: "git", backgroundColor: "#eee", color: "#181818", },
+    { name: "html", backgroundColor: "#FB4D29", color: "#eee", },
+    { name: "css", backgroundColor: "rgb(1,119,189)", color: "#eee", },
+];
 
-technologies.forEach(tech => {``
+technologies.forEach(tech => {
     const techBox = document.createElement('div');
     techBox.classList.add('tech');
     techBox.innerText = tech.name;
