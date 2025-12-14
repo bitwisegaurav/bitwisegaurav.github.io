@@ -1,13 +1,13 @@
 @use 'var';
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var.$main-font-family;
 }
 
-body {
+#working-body {
     height: 100vh;
     width: 100%;
     padding: 3rem 12.5%;
@@ -16,7 +16,7 @@ body {
     background-color: var.$primary-background-color;
     overflow: hidden;
 
-    main{
+    main {
         width: 100%;
         display: flex;
         // flex-direction: column;
@@ -52,12 +52,14 @@ body {
                 text-align: center;
                 font-size: 3rem;
             }
-            p{
+
+            p {
                 text-align: center;
                 color: var.$secondary-background-color;
                 font-size: 1rem;
             }
-            &::after{
+
+            &::after {
                 content: '';
                 position: absolute;
                 bottom: 0;
@@ -79,7 +81,8 @@ body {
         h1 {
             font-size: 2rem !important;
         }
-        p{
+
+        p {
             font-size: 10px !important;
         }
     }
@@ -88,11 +91,12 @@ body {
 @media screen and (max-width: 900px) {
     body {
         padding: 1rem 5%;
-        
-        main{
+
+        main {
             flex-direction: column;
             gap: 4rem;
-            .image{
+
+            .image {
                 justify-content: center;
             }
 
@@ -104,43 +108,51 @@ body {
                 h1 {
                     font-size: 2rem !important;
                 }
-                p{
+
+                p {
                     width: 50vw;
                     font-size: 10px !important;
                 }
-                &::after{
+
+                &::after {
                     transform: rotate(-55deg) translate(-65%, 50%);
                 }
             }
-        } 
+        }
     }
 }
 
 @media screen and (max-width: 675px) {
     body main .content {
         gap: 20px;
+
         h1 {
             font-size: 1.5rem !important;
         }
-        p{
+
+        p {
             font-size: 10px !important;
         }
 
-        &::after{
+        &::after {
             bottom: 100% !important;
         }
     }
 }
+
 @media screen and (max-width: 400px) {
     body main .content {
         gap: 10px;
+
         h1 {
             font-size: 20px !important;
         }
-        p{
+
+        p {
             font-size: 8px !important;
         }
-        &::after{
+
+        &::after {
             bottom: 100% !important;
         }
     }

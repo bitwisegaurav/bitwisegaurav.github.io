@@ -33,21 +33,20 @@ const projectsData = [
 	let projectsContent = '';
 	projectsData.forEach((project) => {
 		projectsContent += `<li>
-            <a href="${
-				project.url ? project.url : 'working.html'
+            <a href="${'description.html'
 			}" class="largecursor cursorcolor">
                 <p>${project.title}</p>
                 <div class="project-technologies">
                     ${project.techs
-						.map((tech) => {
-							return `<span>${tech}</span>`;
-						})
-						.join('')}
+				.map((tech) => {
+					return `<span>${tech}</span>`;
+				})
+				.join('')}
                 </div>
                 <div class="project-box">
                     <img src="images/${project.title
-						.toLowerCase()
-						.replaceAll(' ', '')}.png" alt="${project.title}">
+				.toLowerCase()
+				.replaceAll(' ', '')}.png" alt="${project.title}">
                 </div>
             </a>
         </li>`;

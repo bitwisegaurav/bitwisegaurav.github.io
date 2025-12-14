@@ -1,0 +1,370 @@
+@media screen and (max-width: 1200px) {
+  body main #intro {
+    flex-direction: column-reverse;
+    padding: 4rem 5%;
+  }
+  body main #intro .text {
+    width: 100%;
+    align-items: center;
+  }
+  body main #intro .sidepart {
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+  }
+  body main #intro .sidepart .sidebox {
+    height: 100%;
+    width: unset;
+    aspect-ratio: 1/1;
+    text-align: center;
+  }
+  body main #intro .sidepart .sidebox img {
+    height: 100%;
+  }
+  body main .about-outerBox #about {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .about-outerBox #about .side-section {
+    width: 100%;
+    height: 45vh;
+  }
+  body main .about-outerBox #about .side-section .my-image {
+    height: 45vh;
+    width: unset;
+    display: flex;
+    justify-content: center;
+  }
+  body main .about-outerBox #about .side-section .my-image img {
+    height: 100%;
+    width: unset;
+  }
+  body main .about-outerBox #about .about-me {
+    width: 100%;
+  }
+  body main .about-outerBox #about .about-me .about-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  body main .about-outerBox #about .about-me .about-desc p {
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 768px) {
+  body main #cursor {
+    display: none;
+  }
+  body main header .last .nav-links {
+    display: none;
+  }
+  body main header .last .hamburger {
+    display: block;
+  }
+  body main #intro .text {
+    gap: 2rem;
+  }
+  body main #intro .text h1 {
+    font-size: 2rem;
+  }
+  body main #intro .text h1 name {
+    font-size: 3rem;
+  }
+  body main #intro .text p {
+    font-size: medium;
+  }
+  body main #projects {
+    padding: 1rem 5%;
+  }
+  body main #projects #projects-title {
+    font-size: 2rem;
+  }
+  body main #projects .projects-outerBox a {
+    font-size: 1.5rem;
+  }
+  body main #projects .projects-outerBox a .project-box {
+    width: 50vw;
+    max-height: 30vw;
+  }
+  body main #projects .projects-outerBox a .project-box img {
+    border-radius: 0.5rem;
+  }
+  body main #projects .projects-lower {
+    margin-top: 5rem;
+  }
+  body main #projects .projects-lower a {
+    padding: 0.5rem 1rem;
+    font-size: smaller;
+  }
+  body main .about-outerBox #about .about-me {
+    width: 100%;
+  }
+  body main .about-outerBox #about .about-me .about-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  body main .about-outerBox #about .about-me .about-desc p {
+    font-size: smaller;
+  }
+  body main footer {
+    flex-direction: column-reverse;
+    height: unset;
+    padding: 2rem 5%;
+    gap: 4rem;
+  }
+  body main footer .left-section {
+    gap: 4rem;
+    padding-right: 0;
+  }
+  body main footer .left-section .upper {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    justify-content: center;
+  }
+  body main footer .left-section .upper .social-links a {
+    font-size: x-small;
+  }
+  body main footer .left-section .lower q {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 570px) {
+  body main #projects .projects-outerBox ul li a {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  body main #intro .sidepart .sidebox {
+    width: 80vw;
+    height: unset;
+    aspect-ratio: 1;
+  }
+  body main #intro .sidepart .sidebox img {
+    width: 100%;
+    height: unset;
+  }
+  body main #projects .projects-outerBox ul li a .project-box {
+    display: none;
+  }
+}
+:root {
+  --special-color: #FFE74C;
+  --shadow-color: rgba(255, 231, 76, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #eee;
+  scroll-behavior: smooth;
+}
+*::-moz-selection {
+  background-color: #fff196;
+  color: #555;
+}
+*::selection {
+  background-color: #fff196;
+  color: #555;
+}
+
+body {
+  background: linear-gradient(to bottom, #181818 10rem, #333);
+}
+
+.container {
+  width: 100%;
+  padding: 10rem 12.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero__left h1 {
+  font-size: 4rem;
+  color: #eee;
+}
+.hero__left h1 span {
+  color: var(--special-color);
+}
+.hero__left .subtitle {
+  font-size: 1.4rem;
+  color: #aaa;
+}
+.hero__left .desc {
+  max-width: 520px;
+  line-height: 160%;
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 1rem;
+}
+
+.highlight {
+  color: var(--special-color);
+}
+
+.stores {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.store {
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: small;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.store img {
+  width: 10rem;
+}
+.store img:hover {
+  box-shadow: 0 0 1.5rem rgba(255, 231, 76, 0.1);
+}
+.store.apple {
+  background-color: transparent;
+  border: 1px solid #aaa;
+  color: #aaa;
+}
+.store.apple:hover {
+  border-color: var(--special-color);
+  color: var(--special-color);
+}
+
+.hero__right {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.app-icon {
+  width: min(15rem, 20vw);
+  aspect-ratio: 1;
+  border-radius: 24%;
+  background: white;
+  box-shadow: 0 0 4rem var(--special-color);
+}
+
+.wave {
+  width: 3rem;
+  height: 4px;
+  background-color: #181818;
+  position: relative;
+}
+.wave::before, .wave::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  background-color: #181818;
+  top: -8px;
+}
+.wave::before {
+  left: 10px;
+}
+.wave::after {
+  right: 10px;
+}
+
+.screenshots--carousel {
+  width: 100%;
+  position: relative;
+}
+.screenshots--carousel .carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.screenshots--carousel .screenshots__list {
+  display: flex;
+  gap: 2rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  padding-bottom: 1rem;
+}
+.screenshots--carousel .shot {
+  flex: 0 0 18rem;
+  aspect-ratio: 9/16;
+  border-radius: 1.5rem;
+  background-color: #555;
+  overflow: hidden;
+}
+.screenshots--carousel .shot img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+}
+.screenshots--carousel .carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--special-color);
+  color: #181818;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.screenshots--carousel .carousel__btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 1.5rem rgba(255, 231, 76, 0.1);
+}
+.screenshots--carousel .prev {
+  left: -1.5rem;
+}
+.screenshots--carousel .next {
+  right: -1.5rem;
+}
+
+.content h3 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  letter-spacing: 1px;
+}
+.content h3::-moz-selection {
+  color: #181818;
+}
+.content h3::selection {
+  color: #181818;
+}
+.content p {
+  max-width: 720px;
+  margin-top: 2rem;
+  line-height: 160%;
+  color: #aaa;
+  font-size: large;
+}
+
+/* Responsive *//*# sourceMappingURL=description.css.map */
