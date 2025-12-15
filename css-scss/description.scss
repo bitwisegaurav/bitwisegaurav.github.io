@@ -166,17 +166,18 @@ body {
         gap: 2rem;
         overflow-x: auto;
         scroll-behavior: smooth;
-        padding-bottom: 1rem;
+        padding: 0 4rem 1rem;
 
-        /* Hide scrollbar for cleaner look */
+        -webkit-mask-image: linear-gradient(to right, transparent 0, black 6rem, black calc(100% - 6rem), transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0, black 6rem, black calc(100% - 6rem), transparent 100%);
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+
         scrollbar-width: none;
-        /* Firefox */
         -ms-overflow-style: none;
-        /* IE and Edge */
 
         &::-webkit-scrollbar {
             display: none;
-            /* Chrome, Safari, Opera */
         }
     }
 
@@ -218,6 +219,11 @@ body {
         justify-content: center;
 
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        img {
+            width: 70%;
+            aspect-ratio: 1;
+        }
 
         &:hover {
             transform: translateY(-50%) scale(1.1);

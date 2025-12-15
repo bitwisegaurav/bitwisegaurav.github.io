@@ -295,11 +295,18 @@ body {
 .screenshots--carousel .screenshots__list {
   display: flex;
   gap: 2rem;
-  overflow-x: hidden;
+  overflow-x: auto;
   scroll-behavior: smooth;
-  min-width: -moz-max-content;
-  min-width: max-content;
-  padding-bottom: 1rem;
+  padding: 0 4rem 1rem;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 6rem, black calc(100% - 6rem), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 6rem, black calc(100% - 6rem), transparent 100%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.screenshots--carousel .screenshots__list::-webkit-scrollbar {
+  display: none;
 }
 .screenshots--carousel .shot {
   flex: 0 0 18rem;
@@ -336,6 +343,10 @@ body {
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.screenshots--carousel .carousel__btn img {
+  width: 70%;
+  aspect-ratio: 1;
 }
 .screenshots--carousel .carousel__btn:hover {
   transform: translateY(-50%) scale(1.1);
