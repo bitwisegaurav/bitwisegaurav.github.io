@@ -1,0 +1,37 @@
+{
+    "jamnation": {
+        "name": "Jam Nation",
+        "tagLine": "Something something",
+        "description": "Jam Nation is a platform that allows users to create, share, and discover jam sessions. Users can create a jam session by setting the time, date, and location. Other users can join the jam session and contribute to the jam. Users can also view the jam sessions created by other users and join them.",
+        "androidUrl": "https://play.google.com/store/apps/details?id=com.jamnation.app",
+        "iosUrl": "https://apps.apple.com/us/app/jam-nation/id1649943824",
+        "challenge": "Time taking to get the data",
+        "solution": "Used caching for this"
+    },
+    "steps": {
+        "name": "Moonwalk",
+        "tagLine": "Something something",
+        "description": "Jam Nation is a platform that allows users to create, share, and discover jam sessions. Users can create a jam session by setting the time, date, and location. Other users can join the jam session and contribute to the jam. Users can also view the jam sessions created by other users and join them.",
+        "iosUrl": "https://apps.apple.com/us/app/jam-nation/id1649943824",
+        "challenge": "Time taking to get the data",
+        "solution": "Used caching for this"
+    },
+    "shortfilmshow": {
+        "name": "The Short Film Show",
+        "tagLine": "Something something",
+        "description": "Jam Nation is a platform that allows users to create, share, and discover jam sessions. Users can create a jam session by setting the time, date, and location. Other users can join the jam session and contribute to the jam. Users can also view the jam sessions created by other users and join them.",
+        "androidUrl": "https://play.google.com/store/apps/details?id=com.jamnation.app",
+        "iosUrl": "https://apps.apple.com/us/app/jam-nation/id1649943824",
+        "challenge": "Time taking to get the data",
+        "solution": "Used caching for this"
+    },
+    "xguard": {
+        "name": "XGuard",
+        "tagLine": "Something something",
+        "description": "Jam Nation is a platform that allows users to create, share, and discover jam sessions. Users can create a jam session by setting the time, date, and location. Other users can join the jam session and contribute to the jam. Users can also view the jam sessions created by other users and join them.",
+        "androidUrl": "https://play.google.com/store/apps/details?id=com.jamnation.app",
+        "iosUrl": "https://apps.apple.com/us/app/jam-nation/id1649943824",
+        "challenge": "Time taking to get the data",
+        "solution": "Used caching for this"
+    }
+}

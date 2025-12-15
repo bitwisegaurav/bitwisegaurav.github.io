@@ -121,9 +121,19 @@ body {
     width: min(15rem, 20vw);
     aspect-ratio: 1;
     border-radius: 24%;
-    background: white;
-    // @include var.centerGrid;
+    background: var.$secondary-background-color;
+    @include var.centerGrid;
     box-shadow: 0 0 4rem var(--special-color);
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
 }
 
 .wave {
@@ -167,6 +177,7 @@ body {
         overflow-x: auto;
         scroll-behavior: smooth;
         padding: 0 4rem 1rem;
+        min-width: 100%;
 
         -webkit-mask-image: linear-gradient(to right, transparent 0, black 6rem, black calc(100% - 6rem), transparent 100%);
         mask-image: linear-gradient(to right, transparent 0, black 6rem, black calc(100% - 6rem), transparent 100%);

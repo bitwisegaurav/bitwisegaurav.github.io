@@ -258,8 +258,22 @@ body {
   width: min(15rem, 20vw);
   aspect-ratio: 1;
   border-radius: 24%;
-  background: white;
+  background: #555;
+  display: grid;
+  place-items: center;
   box-shadow: 0 0 4rem var(--special-color);
+  overflow: hidden;
+}
+.app-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
 }
 
 .wave {
@@ -298,6 +312,7 @@ body {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 0 4rem 1rem;
+  min-width: 100%;
   -webkit-mask-image: linear-gradient(to right, transparent 0, black 6rem, black calc(100% - 6rem), transparent 100%);
   mask-image: linear-gradient(to right, transparent 0, black 6rem, black calc(100% - 6rem), transparent 100%);
   -webkit-mask-size: 100% 100%;

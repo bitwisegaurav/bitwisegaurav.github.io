@@ -35,11 +35,17 @@
 		<main class="container">
 			<section class="hero">
 				<div class="hero__left">
-					<h1>Jam Nation</h1>
-					<p class="subtitle">
+					<h1 id="app-name">Jam Nation</h1>
+					<p
+						class="subtitle"
+						id="app-tagLine"
+					>
 						Minimal music app for distraction-free listening
 					</p>
-					<p class="desc">
+					<p
+						class="desc"
+						id="app-description"
+					>
 						Jam Nation is a music-focused platform designed to bring
 						creators and listeners together through seamless
 						discovery and sharing. It enables users to explore
@@ -51,13 +57,19 @@
 					</p>
 
 					<div class="stores">
-						<div class="store">
+						<div
+							class="store"
+							id="playStore-btn"
+						>
 							<img
 								src="./images/playStoreButton.png"
 								alt=""
 							/>
 						</div>
-						<div class="store">
+						<div
+							class="store"
+							id="appStore-btn"
+						>
 							<img
 								src="./images/appStoreButton.png"
 								alt=""
@@ -67,11 +79,17 @@
 				</div>
 
 				<div class="hero__right">
-					<div class="app-icon"></div>
+					<div
+						class="app-icon"
+						id="appIcon"
+					></div>
 				</div>
 			</section>
 
-			<section class="screenshots screenshots--carousel">
+			<section
+				class="screenshots screenshots--carousel"
+				id="screenshotsCarouselContainer"
+			>
 				<div class="carousel">
 					<button
 						class="carousel__btn prev"
@@ -130,7 +148,7 @@
 				<h3>
 					What Was the Primary Challenge Faced During This Project?
 				</h3>
-				<p>
+				<p id="challenge">
 					Integrating real-time data sync across diverse mobile
 					platforms while maintaining data integrity and offline
 					support.
@@ -139,7 +157,7 @@
 				<h3>
 					What Was the Solution Implemented to Address This Challenge?
 				</h3>
-				<p>
+				<p id="solution">
 					Engineered a custom
 					<span class="highlight">cloud-based architecture</span> with
 					<span class="highlight">predictive</span> and robust offline
@@ -149,4 +167,8 @@
 		</main>
 	</body>
 	<script src="./js/carousel.js"></script>
+	<script
+		defer
+		src="./js/descriptionDetails.js"
+	></script>
 </html>

@@ -3,11 +3,13 @@ const projects = document.querySelectorAll('.projects-outerBox a');
 const projectsData = [
 	{
 		title: 'Jam Nation',
+		name: 'jamnation',
 		url: 'https://play.google.com/store/apps/details?id=com.jamnation.app&pli=1',
 		techs: ['Expo', 'React Native', 'Appsflyer'],
 	},
 	{
 		title: 'MoonWalk',
+		name: 'steps',
 		url: 'https://apps.apple.com/ch/app/moonwalk/id6743747397',
 		techs: [
 			'Expo',
@@ -19,11 +21,13 @@ const projectsData = [
 	},
 	{
 		title: 'The Short Film Show',
+		name: 'shortfilmshow',
 		url: 'https://play.google.com/store/apps/details?id=com.shortfilmshow.app',
 		techs: ['Expo', 'React Native', 'Typescript', 'Tanstack query'],
 	},
 	{
 		title: 'Xguard',
+		name: 'xguard',
 		url: 'https://play.google.com/store/apps/details?id=com.xguard.app',
 		techs: ['React Native', 'Typescript', 'Stripe'],
 	},
@@ -33,20 +37,21 @@ const projectsData = [
 	let projectsContent = '';
 	projectsData.forEach((project) => {
 		projectsContent += `<li>
-            <a href="${'description.html'
+            <a href="${
+				'description.html?project=' + project.name
 			}" class="largecursor cursorcolor">
                 <p>${project.title}</p>
                 <div class="project-technologies">
                     ${project.techs
-				.map((tech) => {
-					return `<span>${tech}</span>`;
-				})
-				.join('')}
+						.map((tech) => {
+							return `<span>${tech}</span>`;
+						})
+						.join('')}
                 </div>
                 <div class="project-box">
                     <img src="images/${project.title
-				.toLowerCase()
-				.replaceAll(' ', '')}.png" alt="${project.title}">
+						.toLowerCase()
+						.replaceAll(' ', '')}.png" alt="${project.title}">
                 </div>
             </a>
         </li>`;
