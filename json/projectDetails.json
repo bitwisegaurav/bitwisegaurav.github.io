@@ -2,6 +2,7 @@
     "jamnation": {
         "name": "Jam Nation",
         "tagLine": "Connect, jam, and collaborate with musicians worldwide.",
+        "count": 10,
         "description": "Jam Nation is designed as a streamlined platform for musicians to discover, create, and join jam sessions across different genres and locations. The app provides a curated experience where users can explore sessions based on interest, availability, and skill level, ensuring that every interaction feels purposeful and relevant.\n\nThe platform supports an intuitive flow for creating new sessions, inviting collaborators, and engaging with the community. Users can maintain their musical identity while connecting with like-minded artists. The experience prioritizes ease of navigation, fast discovery, and a clean interface that enables musicians to focus on what matters—collaborating, practicing, and building real-world connections through music.",
         "androidUrl": "https://play.google.com/store/apps/details?id=com.jamnation.app",
         "iosUrl": "https://apps.apple.com/ch/app/jam-nation/id6677019054",
@@ -11,6 +12,7 @@
     "steps": {
         "name": "Moonwalk",
         "tagLine": "Track daily movement with precision.",
+        "count": 11,
         "description": "Moonwalk provides users with a comprehensive view of their daily activity by combining step tracking, calorie estimation, distance measurement, and goal progress into a unified interface. The app delivers clear insights into how users move throughout the day and why maintaining consistency is important for overall wellness.\n\nMoonwalk becomes especially valuable as users build long-term habits. The app maintains historical records, offering weekly and monthly summaries that help users identify patterns and measure improvements over time. With detailed analytics, native widgets, and a smooth tracking pipeline, Moonwalk makes it easier for users to stay accountable, visualize progress, and maintain steady momentum toward their fitness goals.",
         "iosUrl": "https://apps.apple.com/ch/app/moonwalk/id6743747397",
         "challenge": "A major challenge involved implementing a native widget, as React Native does not provide JS-level support for home screen widgets. This limitation required a deeper native integration while simultaneously ensuring that the widget could display data with high accuracy. Additionally, the client required strict pixel-perfect UI across all device sizes, significantly raising the design precision and consistency requirements across the entire app.",
@@ -19,6 +21,7 @@
     "shortfilmshow": {
         "name": "The Short Film Show",
         "tagLine": "Discover curated films with a seamless viewing experience.",
+        "count": 7,
         "description": "The Short Film Show provides a structured environment for discovering, browsing, and enjoying short films across multiple genres. The app emphasizes smooth navigation and a thoughtfully organized catalog that helps users quickly find films aligned with their interests. Every part of the workflow—from browsing categories to viewing recommendations and managing watchlists—is engineered for clarity and ease of use.\n\nBeyond simple playback, the app aims to create an enjoyable, uninterrupted viewing experience with responsive UI behavior, optimized film lists, and a content structure designed around user engagement. It supports a modern streaming experience that serves both casual viewers and enthusiasts looking to explore high-quality short-format storytelling.",
         "androidUrl": "https://play.google.com/store/apps/details?id=com.shortfilmshow.app",
         "iosUrl": "https://apps.apple.com/ch/app/the-short-film-show/id6748294748",
@@ -28,6 +31,7 @@
     "xguard": {
         "name": "XGuard",
         "tagLine": "On-demand private security with real-time coordination.",
+        "count": 12,
         "description": "XGuard enables users to book trained and certified security professionals for on-demand or scheduled services. The app is built around clarity and trust, allowing clients to browse available guards, review details, and request support for residential, commercial, or event-based needs. Its clean interface ensures that security bookings remain simple and transparent.\n\nThe platform also supports real-time operational workflows, including assignment tracking, communication, and service status updates. These features help clients stay informed at every step of the engagement. XGuard ultimately connects users with reliable security resources through a streamlined, intuitive experience that balances functionality with reassurance.",
         "androidUrl": "https://play.google.com/store/apps/details?id=com.xguard.app",
         "iosUrl": "https://apps.apple.com/ch/app/xguard-security/id6670405089",

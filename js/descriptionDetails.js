@@ -52,32 +52,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 			}
 		}
 
-		getAndRenderImages(appKey);
+		getAndRenderImages(appKey, app);
 		updateSpecialColor();
 	} catch (e) {}
 });
 
-async function getAndRenderImages(appName) {
+async function getAndRenderImages(appName, appData) {
 	const container = document.getElementById('screenshotsCarousel');
 	const wrapper = document.getElementById('screenshotsCarouselContainer');
 	if (!container || !wrapper) return;
-	const dirUrl = `./appScreenShots/${encodeURIComponent(appName)}/`;
+	const dirUrl = `./appScreenshots/${encodeURIComponent(appName)}/`;
 	try {
-		const res = await fetch(dirUrl, { cache: 'no-store' });
-		if (!res.ok) return;
-		const html = await res.text();
-		const doc = new DOMParser().parseFromString(html, 'text/html');
-		const hrefs = Array.from(doc.querySelectorAll('a'))
-			.map((a) => a.getAttribute('href'))
-			.filter((h) => h && /\.(png|jpe?g|webp|gif)$/i.test(h));
-		const files = hrefs
-			.map((h) => h.split('/').pop())
-			.sort((a, b) =>
-				a.localeCompare(b, undefined, {
-					numeric: true,
-					sensitivity: 'base',
-				})
-			);
+		const files = Array.from({length: appData?.count ?? 0}).map((_, idx) => appName+(idx+1)+'.png')
 
 		if (files.length < 1) {
 			wrapper.remove();
