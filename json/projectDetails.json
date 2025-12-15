@@ -4,7 +4,7 @@
         "tagLine": "Connect, jam, and collaborate with musicians worldwide.",
         "description": "Jam Nation is a cross-platform music collaboration app enabling real-time jam session discovery, musician matching, session scheduling, and community engagement. Built with scalable APIs, optimized data flows, and offline-first patterns to deliver fast session browsing and seamless participation.",
         "androidUrl": "https://play.google.com/store/apps/details?id=com.jamnation.app",
-        "iosUrl": "https://apps.apple.com/us/app/jam-nation/id1649943824",
+        "iosUrl": "https://apps.apple.com/ch/app/jam-nation/id6677019054",
         "challenge": "Data from the backend was loading very slowly.",
         "solution": "Implemented caching for initial data, prioritizing non-frequently changing content to load instantly while updating it in the background."
     },
@@ -12,7 +12,7 @@
         "name": "Moonwalk",
         "tagLine": "Track daily movement with precision.",
         "description": "Moonwalk is a Firebase-backed activity tracker providing real-time step counting, calorie and distance computation, daily goal progress, historical analytics, leaderboards, goal management, and native widgets. Built with optimized sensors, local caching, and background-safe computation for consistent data accuracy.",
-        "iosUrl": "https://apps.apple.com/us/app/jam-nation/id1649943824",
+        "iosUrl": "https://apps.apple.com/ch/app/moonwalk/id6743747397",
         "challenge": "Implementing native widgets was not supported at the JS level, and the client required strict pixel-perfect designs for all devices.",
         "solution": "Used a scaling-based layout approach for pixel-perfect UI, and built the widget in Swift using an App Group to share data between React Native and the native widget."
     },
@@ -20,8 +20,8 @@
         "name": "The Short Film Show",
         "tagLine": "Discover curated films with a seamless viewing experience.",
         "description": "The Short Film Show is a multi-genre video streaming app featuring smooth playback, responsive UI, personalized recommendations, search, watchlists, and creator uploads. Implemented with optimized rendering, efficient list virtualization, lazy loading, and lightweight state management for fast navigation across a large film library.",
-        "androidUrl": "https://play.google.com/store/apps/details?id=com.jamnation.app",
-        "iosUrl": "https://apps.apple.com/us/app/jam-nation/id1649943824",
+        "androidUrl": "https://play.google.com/store/apps/details?id=com.shortfilmshow.app",
+        "iosUrl": "https://apps.apple.com/ch/app/the-short-film-show/id6748294748",
         "challenge": "Streaming M3U8 videos caused buffering issues and noticeable playback lag.",
         "solution": "Applied frontend-level optimizations such as improved data handling, lightweight state updates, and code splitting to reduce load and enhance playback performance."
     },
@@ -29,8 +29,8 @@
         "name": "XGuard",
         "tagLine": "On-demand private security with real-time coordination.",
         "description": "XGuard is an on-demand private security platform that lets clients book licensed security professionals, schedule services, view real-time assignments, and manage sessions with in-app communication and tracking. Frontend emphasizes responsive booking UI, real-time location handling, secure chat interfaces, and clear status flows for clients and guards.",
-        "androidUrl": "https://play.google.com/store/apps/details?id=com.jamnation.app",
-        "iosUrl": "https://apps.apple.com/us/app/jam-nation/id1649943824",
+        "androidUrl": "https://play.google.com/store/apps/details?id=com.xguard.app",
+        "iosUrl": "https://apps.apple.com/ch/app/xguard-security/id6670405089",
         "challenge": "The codebase was outdated, using class components and Redux Saga throughout.",
         "solution": "Kept the existing architecture but reorganized parts of the code, simplified flows, reduced unnecessary re-renders, and stabilized data handling to ensure reliability without rewriting the codebase."
     }
