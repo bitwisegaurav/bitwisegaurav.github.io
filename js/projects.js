@@ -17,6 +17,7 @@ const projectsData = [
 			'Typescript',
 			'Firebase',
 			'AppleHealthKit',
+			'Redux Toolkit',
 		],
 	},
 	{
@@ -29,7 +30,7 @@ const projectsData = [
 		title: 'Xguard',
 		name: 'xguard',
 		url: 'https://play.google.com/store/apps/details?id=com.xguard.app',
-		techs: ['React Native', 'Typescript', 'Stripe'],
+		techs: ['React Native', 'Typescript', 'Stripe', 'Redux saga'],
 	},
 ];
 
