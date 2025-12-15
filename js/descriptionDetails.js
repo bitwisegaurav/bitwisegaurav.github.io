@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 		}
 
 		getAndRenderImages(appKey);
+		updateSpecialColor();
 	} catch (e) {}
 });
 
@@ -94,5 +95,19 @@ async function getAndRenderImages(appName) {
 	} catch (e) {
 		wrapper.remove();
 		return;
+	}
+}
+
+async function updateSpecialColor() {
+	const specialColor = sessionStorage.getItem('special-color');
+	if (specialColor) {
+		document.documentElement.style.setProperty(
+			'--special-color',
+			specialColor
+		);
+		document.documentElement.style.setProperty(
+			'--shadow-color',
+			specialColor + '88'
+		);
 	}
 }
