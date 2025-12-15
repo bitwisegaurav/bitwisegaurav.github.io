@@ -325,7 +325,7 @@ body {
 }
 .screenshots--carousel .shot {
   flex: 0 0 18rem;
-  aspect-ratio: 9/16;
+  aspect-ratio: 375/812;
   border-radius: 1.5rem;
   background-color: #555;
   overflow: hidden;

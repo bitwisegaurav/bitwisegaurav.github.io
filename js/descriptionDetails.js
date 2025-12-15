@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 		if (solutionEl) solutionEl.textContent = app.solution || '';
 
 		if (appIcon) {
-			appIcon.innerHTML = `<img src="./appScreenshots/${appKey}/${appKey}Logo.png" alt="${app.name} Logo">`;
+			appIcon.innerHTML = `<img src="./images/${appKey}Logo.png" alt="${app.name} Logo">`;
 		}
 
 		if (playBtn) {
