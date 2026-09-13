@@ -2,7 +2,7 @@
     "troom": {
         "name": "Troom",
         "tagLine": "Your Personal Chauffeur in Your Own Car",
-        "count": 10,
+        "count": 15,
         "description": "Troom is a chauffeur service that lets users book professional drivers to drive their own car. Users can schedule rides, select drivers, track their chauffeur, communicate through the app, manage bookings, and access additional services such as Bring Home.\n\nThe Bring Home service allows customers to book two drivers when they need to travel in their own car. One driver takes the customer and their car to the destination, while the second driver brings the first driver back to the original location so the customer's car can remain at the destination.",
         "androidUrl": "https://play.google.com/store/apps/details?id=troom.be",
         "iosUrl": "https://apps.apple.com/in/app/troom/id1517817270",
