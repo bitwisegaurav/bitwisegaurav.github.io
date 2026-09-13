@@ -1,32 +1,37 @@
 const technologyBox = document.querySelector('.technologies');
 const technologies = [
 	{ name: 'react native', backgroundColor: '#61DAFB', color: '#181818' },
-	{ name: 'expo', backgroundColor: '#000020', color: '#eee' },
-	{
-		name: 'javascript',
-		backgroundColor: 'rgb(255,225,58)',
-		color: '#181818',
-	},
-	{ name: 'typescript', backgroundColor: '#2A7CC7', color: '#eee' },
-	{ name: 'react', backgroundColor: '#087EA4', color: '#eee' },
-	{ name: 'react query', backgroundColor: '#FF4154', color: '#eee' },
-	{ name: 'redux toolkit', backgroundColor: '#764ABC', color: '#eee' },
-	{ name: 'android studio', backgroundColor: '#3DDC84', color: '#181818' },
-	{ name: 'xcode', backgroundColor: '#1575F9', color: '#eee' },
-	{ name: 'git', backgroundColor: '#eee', color: '#181818' },
-	{ name: 'redux persist', backgroundColor: '#764ABC', color: '#eee' },
-	{ name: 'redux query', backgroundColor: '#764ABC', color: '#eee' },
-	{ name: 'zustand', backgroundColor: '#181818', color: '#eee' },
-	{
-		name: 'firebase firestore',
-		backgroundColor: '#FFA611',
-		color: '#181818',
-	},
-	{ name: 'push notifications', backgroundColor: '#4A90E2', color: '#eee' },
-	{ name: 'appsflyer', backgroundColor: '#0080FF', color: '#eee' },
-	{ name: 'crash analytics', backgroundColor: '#FFCA28', color: '#181818' },
-	{ name: 'react hook form', backgroundColor: '#EC5990', color: '#eee' },
-	{ name: 'ai integrations', backgroundColor: '#6A5ACD', color: '#eee' },
+	{ name: 'typescript', backgroundColor: '#3178C6', color: '#fff' },
+	{ name: 'javascript', backgroundColor: '#F0DB4F', color: '#181818' },
+	{ name: 'react', backgroundColor: '#149ECA', color: '#fff' },
+	{ name: 'expo', backgroundColor: '#111111', color: '#fff' },
+	{ name: 'swift', backgroundColor: '#F05138', color: '#fff' },
+
+	{ name: 'redux toolkit', backgroundColor: '#764ABC', color: '#fff' },
+	{ name: 'redux saga', backgroundColor: '#8B5CF6', color: '#fff' },
+	{ name: 'zustand', backgroundColor: '#3B3B3B', color: '#fff' },
+	{ name: 'react query', backgroundColor: '#FF4154', color: '#fff' },
+	{ name: 'rtk query', backgroundColor: '#9B59B6', color: '#fff' },
+
+	{ name: 'firebase', backgroundColor: '#FFB300', color: '#181818' },
+	{ name: 'sentry', backgroundColor: '#5B5B5B', color: '#fff' },
+	{ name: 'revenuecat', backgroundColor: '#E53935', color: '#fff' },
+	{ name: 'stripe', backgroundColor: '#635BFF', color: '#fff' },
+	{ name: 'react native iap', backgroundColor: '#007AFF', color: '#fff' },
+	{ name: 'appsflyer', backgroundColor: '#00A67E', color: '#fff' },
+
+	{ name: 'fastlane', backgroundColor: '#0088FF', color: '#fff' },
+	{ name: 'eas build', backgroundColor: '#4630EB', color: '#fff' },
+	{ name: 'expo updates', backgroundColor: '#4630EB', color: '#fff' },
+
+	{ name: 'jest', backgroundColor: '#99425B', color: '#fff' },
+	{ name: 'maestro', backgroundColor: '#F59E0B', color: '#181818' },
+
+	{ name: 'claude', backgroundColor: '#D97757', color: '#fff' },
+	{ name: 'figma', backgroundColor: '#6D5ACF', color: '#fff' },
+
+	{ name: 'git', backgroundColor: '#F05032', color: '#fff' },
+	{ name: 'github', backgroundColor: '#24292F', color: '#fff' },
 ];
 
 technologies.forEach((tech) => {
