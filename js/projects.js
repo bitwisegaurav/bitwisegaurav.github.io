@@ -13,12 +13,12 @@ const projectsData = [
 		url: 'https://play.google.com/store/apps/details?id=com.jamnation.app&pli=1',
 		techs: ['React Native', 'Firebase', 'Jest', 'Maestro', 'Adyen'],
 	},
-	{
-		title: 'Swaaad',
-		name: 'swaaad',
-		url: 'https://play.google.com/store/apps/details?id=com.jamnation.app&pli=1',
-		techs: ['Expo', 'React Native', 'Firebase', 'Expo updates'],
-	},
+	// {
+	// 	title: 'Swaaad',
+	// 	name: 'swaaad',
+	// 	url: 'https://play.google.com/store/apps/details?id=com.jamnation.app&pli=1',
+	// 	techs: ['Expo', 'React Native', 'Firebase', 'Expo updates'],
+	// },
 	{
 		title: 'Jam Nation',
 		name: 'jamnation',
