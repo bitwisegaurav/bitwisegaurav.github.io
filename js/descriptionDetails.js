@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 		if (nameEl) nameEl.textContent = app.name || '';
 		if (tagEl) tagEl.textContent = app.tagLine || '';
-		if (descEl) descEl.textContent = app.description || '';
-		if (challengeEl) challengeEl.textContent = app.challenge || '';
-		if (solutionEl) solutionEl.textContent = app.solution || '';
+		if (descEl) descEl.innerText = app.description || '';
+		if (challengeEl) challengeEl.innerText = app.challenge || '';
+		if (solutionEl) solutionEl.innerText = app.solution || '';
 
 		if (appIcon) {
 			appIcon.innerHTML = `<img src="./images/${appKey}Logo.png" alt="${app.name} Logo">`;
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 		getAndRenderImages(appKey, app);
 		updateSpecialColor();
-	} catch (e) {}
+	} catch (e) { }
 });
 
 async function getAndRenderImages(appName, appData) {
@@ -63,7 +63,7 @@ async function getAndRenderImages(appName, appData) {
 	if (!container || !wrapper) return;
 	const dirUrl = `./appScreenshots/${encodeURIComponent(appName)}/`;
 	try {
-		const files = Array.from({length: appData?.count ?? 0}).map((_, idx) => appName+(idx+1)+'.png')
+		const files = Array.from({ length: appData?.count ?? 0 }).map((_, idx) => appName + (idx + 1) + '.png')
 
 		if (files.length < 1) {
 			wrapper.remove();

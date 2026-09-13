@@ -1,4 +1,34 @@
 {
+    "troom": {
+        "name": "Troom",
+        "tagLine": "Your Personal Chauffeur in Your Own Car",
+        "count": 10,
+        "description": "Troom is a chauffeur service that lets users book professional drivers to drive their own car. Users can schedule rides, select drivers, track their chauffeur, communicate through the app, manage bookings, and access additional services such as Bring Home.\n\nThe Bring Home service allows customers to book two drivers when they need to travel in their own car. One driver takes the customer and their car to the destination, while the second driver brings the first driver back to the original location so the customer's car can remain at the destination.",
+        "androidUrl": "https://play.google.com/store/apps/details?id=troom.be",
+        "iosUrl": "https://apps.apple.com/in/app/troom/id1517817270",
+        "challenge": "The application was already in production when I joined, so the primary challenge was taking ownership of an existing codebase while maintaining production stability. I handled crashes and ANRs reported through Crashlytics and also had to introduce a new Bring Home service without disrupting the existing ride-booking flow.",
+        "solution": "I investigated and resolved production crashes and ANRs based on Crashlytics reports, improving the application's Crashlytics crash-free users metric to 99.89%. For Bring Home, I extended the existing ride-booking flow, introduced the required screens and APIs, and integrated the new service into the existing architecture. I also implemented smaller features, fixes, and improvements while maintaining production stability."
+    },
+    "tandem": {
+        "name": "Tandem",
+        "tagLine": "Create, play, learn. Together.",
+        "count": 10,
+        "description": "Tandem is a children's learning and reading platform that creates personalised stories, fact books, and activities based on a child's interests and reading level. The app combines interactive content with personalised learning experiences designed for children and their parents.\n\nThe platform includes personalised content, interactive experiences, subscriptions, and downloadable assets that support the learning experience.",
+        "androidUrl": "https://play.google.com/store/apps/details?id=playtandem.com",
+        "iosUrl": "https://apps.apple.com/in/app/tandem/id6464282026",
+        "challenge": "A major stability issue on Android was caused by aggressive asset downloading combined with heavy user interaction and the application's micro-animations. The issue was difficult to diagnose because the application did not have Crashlytics configured. At the same time, the login flow required users to wait almost five minutes after tapping the login button because critical and non-critical APIs and asset downloads were handled as part of the initial flow.",
+        "solution": "I used Microsoft Clarity to identify unusual interaction patterns, reproduced the issue through rapid user interaction, and traced it to excessive concurrent asset downloads. I redesigned the asset download system around three priority queues: high, medium, and low. Downloads were dynamically limited based on the Android version/device configuration, while assets accessed by the user were promoted to high priority. This eliminated the roughly 4,000 Android crashes occurring in a month.\n\nI also redesigned the login flow by categorising APIs according to their importance. Critical APIs such as user data and subscriptions were executed in parallel with retry handling, important-but-non-critical APIs could be skipped when necessary, and non-blocking APIs such as filters were moved to background execution. Initial-screen assets were downloaded during login while remaining assets were progressively downloaded in the background or on demand. This reduced the login wait time from roughly five minutes to around ten seconds.\n\nAdditionally, I introduced unit testing across the application's non-screen logic, integrated AppsFlyer attribution, added RevenueCat subscriptions and Stripe products, and built a personal AI-assisted development workflow using specialised agents to automate parts of feature development with minimal manual interaction."
+    },
+    "swaaad": {
+        "name": "Swaaad: Exclusive Homemade Food",
+        "tagLine": "Fresh food from local kitchens",
+        "count": 10,
+        "description": "Swaaad is a marketplace for homemade food that connects customers with local home kitchens. Users can discover and order authentic homemade meals prepared by local cooks and explore food options that are not typically available through traditional restaurants.\n\nThe app also supports direct food requests, allowing users to describe what they want in a single request for the admin to coordinate manually with available kitchens.",
+        "androidUrl": "https://play.google.com/store/apps/details?id=com.swaaad",
+        "iosUrl": "https://apps.apple.com/in/app/swaaad-exclusive-homemade-food/id6463008626",
+        "challenge": "The application was built as a React Native CLI project and required frequent production bug fixes. One operational challenge was the need to release fixes quickly, since production issues could otherwise require developers to investigate and resolve them outside normal working hours or over weekends.",
+        "solution": "I migrated the existing React Native CLI application to Expo and configured EAS Build and Expo Updates. Expo Updates enabled production JavaScript fixes to be delivered through OTA updates without waiting for a full App Store or Play Store release, significantly shortening the feedback-to-fix cycle for production issues. I also implemented the Direct Request to Admin feature, allowing users to submit custom food requests instead of placing a standard order, and started implementing an AI chatbot that handles user queries before escalating conversations to human support when required. I also resolved several smaller production bugs."
+    },
     "jamnation": {
         "name": "Jam Nation",
         "tagLine": "Connect, jam, and collaborate with musicians worldwide.",
