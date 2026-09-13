@@ -2,16 +2,16 @@ const projectsBox = document.querySelector('.projects-outerBox');
 const projects = document.querySelectorAll('.projects-outerBox a');
 const projectsData = [
 	{
-		title: 'Troom',
-		name: 'troom',
-		url: 'https://play.google.com/store/apps/details?id=com.jamnation.app&pli=1',
-		techs: ['React Native', 'Firebase', 'Jest', 'Maestro', 'Adyen'],
-	},
-	{
 		title: 'Tandem',
 		name: 'tandem',
 		url: 'https://play.google.com/store/apps/details?id=com.jamnation.app&pli=1',
 		techs: ['React Native', 'Fastlane', 'Appsflyer', 'Jest', 'RevenueCat', 'Stripe'],
+	},
+	{
+		title: 'Troom',
+		name: 'troom',
+		url: 'https://play.google.com/store/apps/details?id=com.jamnation.app&pli=1',
+		techs: ['React Native', 'Firebase', 'Jest', 'Maestro', 'Adyen'],
 	},
 	{
 		title: 'Swaaad',
