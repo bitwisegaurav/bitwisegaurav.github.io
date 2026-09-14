@@ -25,9 +25,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 		if (descEl) descEl.innerText = app.description || '';
 		if (challengeEl) challengeEl.innerText = app.challenge || '';
 		if (solutionEl) solutionEl.innerText = app.solution || '';
+		document.title = app.name || 'App Landing';
+
+		const appLogo = `./images/${appKey}Logo.png`;
+		// const faviconLink = document.getElementById('page-favicon');
+		// if (faviconLink) {
+		// 	faviconLink.href = appLogo;
+		// }
 
 		if (appIcon) {
-			appIcon.innerHTML = `<img src="./images/${appKey}Logo.png" alt="${app.name} Logo">`;
+			appIcon.innerHTML = `<img src="${appLogo}" alt="${app.name} Logo">`;
 		}
 
 		if (playBtn) {
