@@ -20,9 +20,9 @@
         "solution": "I used Microsoft Clarity to identify unusual interaction patterns, reproduced the issue through rapid user interaction, and traced it to excessive concurrent asset downloads. I redesigned the asset download system around three priority queues: high, medium, and low. Downloads were dynamically limited based on the Android version/device configuration, while assets accessed by the user were promoted to high priority. This eliminated the roughly 4,000 Android crashes occurring in a month.\n\nI also redesigned the login flow by categorising APIs according to their importance. Critical APIs such as user data and subscriptions were executed in parallel with retry handling, important-but-non-critical APIs could be skipped when necessary, and non-blocking APIs such as filters were moved to background execution. Initial-screen assets were downloaded during login while remaining assets were progressively downloaded in the background or on demand. This reduced the login wait time from roughly five minutes to around ten seconds.\n\nAdditionally, I introduced unit testing across the application's non-screen logic, integrated AppsFlyer attribution, added RevenueCat subscriptions and Stripe products, and built a personal AI-assisted development workflow using specialised agents to automate parts of feature development with minimal manual interaction."
     },
     "swaaad": {
-        "name": "Swaaad: Exclusive Homemade Food",
+        "name": "Swaaad",
         "tagLine": "Fresh food from local kitchens",
-        "count": 10,
+        "count": 11,
         "description": "Swaaad is a marketplace for homemade food that connects customers with local home kitchens. Users can discover and order authentic homemade meals prepared by local cooks and explore food options that are not typically available through traditional restaurants.\n\nThe app also supports direct food requests, allowing users to describe what they want in a single request for the admin to coordinate manually with available kitchens.",
         "androidUrl": "https://play.google.com/store/apps/details?id=com.swaaad",
         "iosUrl": "https://apps.apple.com/in/app/swaaad-exclusive-homemade-food/id6463008626",
